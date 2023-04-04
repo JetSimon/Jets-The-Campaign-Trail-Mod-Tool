@@ -20,12 +20,13 @@ class TCTData:
         return [answer for answer in self.answers.values() if answer['fields']['question'] == pk]
 
     def get_advisor_feedback_for_answer(self, pk):
-        return [feedback for feedback in self.answer_feedback if feedback['fields']['answer'] == pk]
+        return [feedback for feedback in self.answer_feedback.values() if feedback['fields']['answer'] == pk]
 
 def load_data(folder_name):
     questions = {}
     answers = {}
     states = {}
+    feedbacks = {}
 
     f = open(os.path.join(folder_name, "states.json"))
     states_json = json.load(f)
@@ -51,6 +52,11 @@ def load_data(folder_name):
 
     f = open(os.path.join(folder_name, "answerFeedback.json"))
     answer_feedbacks_json = json.load(f)
+
+    for feedback in answer_feedbacks_json:
+        key = feedback['pk']
+        feedbacks[key] = feedback
+
     f.close()
 
     f = open(os.path.join(folder_name, "answerScoreGlobals.json"))
@@ -85,6 +91,6 @@ def load_data(folder_name):
     state_issue_scores_json = json.load(f)
     f.close()
 
-    data = TCTData(questions, answers, issues_json, state_issue_scores_json, candidate_issue_scores_json, running_mate_issue_scores_json, candidate_state_multipliers_json, answer_score_globals_json, answer_score_issues_json, answer_score_states_json, answer_feedbacks_json, states)
+    data = TCTData(questions, answers, issues_json, state_issue_scores_json, candidate_issue_scores_json, running_mate_issue_scores_json, candidate_state_multipliers_json, answer_score_globals_json, answer_score_issues_json, answer_score_states_json, feedbacks, states)
 
     return data

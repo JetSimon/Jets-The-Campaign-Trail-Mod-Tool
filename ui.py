@@ -24,7 +24,6 @@ def create_question_layout(data, question, current_answers, question_pks):
         current_answers.append(answer)
         col_ans.append([sg.Text("Description")])
         col_ans.append([sg.Multiline(default_text=answer['fields']['description'], size=(80, 5), key=f"description_ans{i}")])
-        i += 1
 
         j = 0
         for feedback in data.get_advisor_feedback_for_answer(answer['pk']):
@@ -34,7 +33,8 @@ def create_question_layout(data, question, current_answers, question_pks):
             col.append([sg.Text("Answer Feedback")])
             col.append([sg.Multiline(default_text=feedback['fields']['answer_feedback'], size=(80, 5), key=f"description_ans{i}_feedback_{j}")])
             col_ans.append([sg.Frame(f"Feedback PK {feedback['pk']}", col)])
-        j += 1
+            j += 1
+        i += 1
 
         col2.append([sg.Frame(f"Answer PK {answer['pk']}", col_ans)])
 

@@ -4,10 +4,6 @@ import PySimpleGUI as sg
 
 sg.theme('SystemDefault')
 
-f = open(os.path.join("json", "states.json"))
-states_json = json.load(f)
-f.close()
-
 data = load_data("json")
     
 current_answers = []
@@ -29,6 +25,13 @@ def save_question():
     for answer in current_answers:
         ans_pk = answer['pk']
         data.answers[ans_pk]['fields']['description'] = window[f"description_ans{i}"].get()
+        
+        j = 0
+        for feedback in data.get_advisor_feedback_for_answer(ans_pk):
+            feedback_pk = feedback['pk']
+            data.answer_feedback[feedback_pk]['fields']['candidate'] = int(window[f"candidate_ans{i}_feedback_{j}"].get())
+            data.answer_feedback[feedback_pk]['fields']['answer_feedback'] = window[f"description_ans{i}_feedback_{j}"].get()
+            j += 1
         i += 1
 
 # Create an event loop
