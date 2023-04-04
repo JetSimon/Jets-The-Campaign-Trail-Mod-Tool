@@ -35,8 +35,6 @@ def create_question_layout(data, question, current_answers, question_pks):
 
         col2.append([sg.Frame(f"Answer PK {answer['pk']}", col_ans)])
 
-    col2.append([sg.Button("Save Changes", key="Save Question")])
-
     layout = [[sg.Column(col1, vertical_alignment="t"), sg.Column(col2, scrollable=True, vertical_scroll_only=True, expand_x=True, expand_y=True, vertical_alignment="t")]]
     return layout
 
@@ -52,14 +50,17 @@ def create_state_layout(data, state, question_pks):
 
     ]
 
-
     layout = [[sg.Column(col1, vertical_alignment="t"), sg.Column(col2, scrollable=True, vertical_scroll_only=True, expand_x=True, expand_y=True, vertical_alignment="t")]]
     return layout
 
 def create_pickers(data, question_pks):
+
     state_pks = [f"{s['pk']} - {s['fields']['abbr']}" for s in data.states.values()]
 
     layout = [
+    [sg.Button("Save", key="save")],
+    [sg.Button("Load", key="load")],
+    #[sg.Button("New", key="new")],
     [sg.Text("Questions", font=("Helvetica", 12, "bold"))],
     [sg.Listbox(values=question_pks, size=(10, 20), expand_y=True, expand_x=True, key="question_picker", enable_events=True)],
     [sg.Text("States", font=("Helvetica", 12, "bold"))],

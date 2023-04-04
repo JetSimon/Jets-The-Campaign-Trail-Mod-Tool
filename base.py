@@ -22,11 +22,25 @@ class TCTData:
     def get_advisor_feedback_for_answer(self, pk):
         return [feedback for feedback in self.answer_feedback.values() if feedback['fields']['answer'] == pk]
 
+    def get_global_score_for_answer(self, pk):
+        return [x for x in self.answer_score_global.values() if x['fields']['answer'] == pk]
+
+    def get_state_score_for_answer(self, pk):
+        return [x for x in self.answer_score_state.values() if x['fields']['answer'] == pk]
+
+    def get_issue_score_for_answer(self, pk):
+        return [x for x in self.answer_score_issue.values() if x['fields']['answer'] == pk]
+
+
 def load_data(folder_name):
     questions = {}
     answers = {}
     states = {}
     feedbacks = {}
+
+    answer_score_globals = {}
+    answer_score_issues = {}
+    answer_score_states = {}
 
     f = open(os.path.join(folder_name, "states.json"))
     states_json = json.load(f)
@@ -61,14 +75,23 @@ def load_data(folder_name):
 
     f = open(os.path.join(folder_name, "answerScoreGlobals.json"))
     answer_score_globals_json = json.load(f)
+    for x in answer_score_globals_json:
+        key = x['pk']
+        answer_score_globals[key] = x
     f.close()
 
     f = open(os.path.join(folder_name, "answerScoreIssues.json"))
     answer_score_issues_json = json.load(f)
+    for x in answer_score_issues_json:
+        key = x['pk']
+        answer_score_issues[key] = x
     f.close()
 
     f = open(os.path.join(folder_name, "answerScoreStates.json"))
     answer_score_states_json = json.load(f)
+    for x in answer_score_states_json:
+        key = x['pk']
+        answer_score_states[key] = x
     f.close()
 
     f = open(os.path.join(folder_name, "candidateIssueScores.json"))
@@ -91,6 +114,6 @@ def load_data(folder_name):
     state_issue_scores_json = json.load(f)
     f.close()
 
-    data = TCTData(questions, answers, issues_json, state_issue_scores_json, candidate_issue_scores_json, running_mate_issue_scores_json, candidate_state_multipliers_json, answer_score_globals_json, answer_score_issues_json, answer_score_states_json, feedbacks, states)
+    data = TCTData(questions, answers, issues_json, state_issue_scores_json, candidate_issue_scores_json, running_mate_issue_scores_json, candidate_state_multipliers_json, answer_score_globals, answer_score_issues, answer_score_states, feedbacks, states)
 
     return data

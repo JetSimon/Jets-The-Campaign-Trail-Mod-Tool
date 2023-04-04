@@ -14,7 +14,7 @@ state = None
 layout = create_question_layout(data, question, current_answers, question_pks)
 
 # Create the window
-window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800))
+window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800), resizable=True)
 
 current_mode = "QUESTION"
 
@@ -61,7 +61,7 @@ while True:
         new_question_pk = values['question_picker'][0]
         question = data.questions[new_question_pk]
         layout = create_question_layout(data, question, current_answers, question_pks)
-        new_window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800))
+        new_window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800), location=window.current_location(), resizable=True)
         window.close()
         window = new_window
         current_mode = "QUESTION"
@@ -70,11 +70,9 @@ while True:
         new_state_pk = int(values['state_picker'][0].split(" -")[0])
         state = data.states[new_state_pk]
         layout = create_state_layout(data, state, question_pks)
-        new_window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800))
+        new_window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800), location=window.current_location(), resizable=True)
         window.close()
         window = new_window
         current_mode = "STATE"
-    elif event == "Save Question":
-        save_question()
 
 window.close()
