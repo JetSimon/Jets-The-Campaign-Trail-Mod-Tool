@@ -9,11 +9,25 @@ data = load_data("json")
 current_answers = []
 question_pks = sorted(list(data.questions.keys()))
 question = data.questions[question_pks[0]]
+state = None
 
 layout = create_question_layout(data, question, current_answers, question_pks)
 
 # Create the window
 window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800))
+
+current_mode = "QUESTION"
+
+def save_current_workspace():
+    if current_mode == "QUESTION":
+        save_question()
+    elif current_mode == "STATE":
+        save_state()
+
+def save_state():
+    pk = state['pk']
+    data.states[pk]['fields']['electoral_votes'] = int(window['electoral_votes'].get())
+    data.states[pk]['fields']['popular_votes'] = int(window['popular_votes'].get())
 
 def save_question():
     pk = question['pk']
@@ -42,7 +56,7 @@ while True:
     if event == "OK" or event == sg.WIN_CLOSED:
         break
     elif event == 'question_picker':
-        save_question()
+        save_current_workspace()
         current_answers = []
         new_question_pk = values['question_picker'][0]
         question = data.questions[new_question_pk]
@@ -50,6 +64,16 @@ while True:
         new_window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800))
         window.close()
         window = new_window
+        current_mode = "QUESTION"
+    elif event == 'state_picker':
+        save_current_workspace()
+        new_state_pk = int(values['state_picker'][0].split(" -")[0])
+        state = data.states[new_state_pk]
+        layout = create_state_layout(data, state, question_pks)
+        new_window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800))
+        window.close()
+        window = new_window
+        current_mode = "STATE"
     elif event == "Save Question":
         save_question()
 
