@@ -1,0 +1,665 @@
+[
+  {
+    "model": "campaign_trail.state",
+    "pk": 181,
+    "fields": {
+      "name": "Alabama",
+      "abbr": "AL",
+      "electoral_votes": 9,
+      "popular_votes": 1672551,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 182,
+    "fields": {
+      "name": "Alaska",
+      "abbr": "AK",
+      "electoral_votes": 3,
+      "popular_votes": 285560,
+      "poll_closing_time": 420,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 183,
+    "fields": {
+      "name": "Arizona",
+      "abbr": "AZ",
+      "electoral_votes": 8,
+      "popular_votes": 1534113,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 184,
+    "fields": {
+      "name": "Arkansas",
+      "abbr": "AR",
+      "electoral_votes": 6,
+      "popular_votes": 921781,
+      "poll_closing_time": 150,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 185,
+    "fields": {
+      "name": "California",
+      "abbr": "CA",
+      "electoral_votes": 54,
+      "popular_votes": 10965856,
+      "poll_closing_time": 300,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 186,
+    "fields": {
+      "name": "Colorado",
+      "abbr": "CO",
+      "electoral_votes": 8,
+      "popular_votes": 1741365,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 187,
+    "fields": {
+      "name": "Connecticut",
+      "abbr": "CT",
+      "electoral_votes": 8,
+      "popular_votes": 1459525,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 188,
+    "fields": {
+      "name": "Delaware",
+      "abbr": "DE",
+      "electoral_votes": 3,
+      "popular_votes": 327622,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 189,
+    "fields": {
+      "name": "Florida",
+      "abbr": "FL",
+      "electoral_votes": 25,
+      "popular_votes": 6963110,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 190,
+    "fields": {
+      "name": "Georgia",
+      "abbr": "GA",
+      "electoral_votes": 13,
+      "popular_votes": 2596804,
+      "poll_closing_time": 60,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 191,
+    "fields": {
+      "name": "Hawaii",
+      "abbr": "HI",
+      "electoral_votes": 4,
+      "popular_votes": 367951,
+      "poll_closing_time": 360,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 192,
+    "fields": {
+      "name": "Idaho",
+      "abbr": "ID",
+      "electoral_votes": 4,
+      "popular_votes": 501621,
+      "poll_closing_time": 300,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 193,
+    "fields": {
+      "name": "Illinois",
+      "abbr": "IL",
+      "electoral_votes": 22,
+      "popular_votes": 4742123,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 194,
+    "fields": {
+      "name": "Indiana",
+      "abbr": "IN",
+      "electoral_votes": 12,
+      "popular_votes": 2199302,
+      "poll_closing_time": 0,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 195,
+    "fields": {
+      "name": "Iowa",
+      "abbr": "IA",
+      "electoral_votes": 7,
+      "popular_votes": 1315563,
+      "poll_closing_time": 240,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 196,
+    "fields": {
+      "name": "Kansas",
+      "abbr": "KS",
+      "electoral_votes": 6,
+      "popular_votes": 1072216,
+      "poll_closing_time": 240,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 197,
+    "fields": {
+      "name": "Kentucky",
+      "abbr": "KY",
+      "electoral_votes": 8,
+      "popular_votes": 1544187,
+      "poll_closing_time": 0,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 198,
+    "fields": {
+      "name": "Louisiana",
+      "abbr": "LA",
+      "electoral_votes": 9,
+      "popular_votes": 1765656,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 199,
+    "fields": {
+      "name": "Maine",
+      "abbr": "ME",
+      "electoral_votes": 4,
+      "popular_votes": 651817,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 200,
+    "fields": {
+      "name": "Maryland",
+      "abbr": "MD",
+      "electoral_votes": 10,
+      "popular_votes": 2025480,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 201,
+    "fields": {
+      "name": "Massachusetts",
+      "abbr": "MA",
+      "electoral_votes": 12,
+      "popular_votes": 2702984,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 202,
+    "fields": {
+      "name": "Michigan",
+      "abbr": "MI",
+      "electoral_votes": 18,
+      "popular_votes": 4232711,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 203,
+    "fields": {
+      "name": "Minnesota",
+      "abbr": "MN",
+      "electoral_votes": 10,
+      "popular_votes": 2438685,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 204,
+    "fields": {
+      "name": "Mississippi",
+      "abbr": "MS",
+      "electoral_votes": 7,
+      "popular_votes": 994926,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 205,
+    "fields": {
+      "name": "Missouri",
+      "abbr": "MO",
+      "electoral_votes": 11,
+      "popular_votes": 2359892,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 206,
+    "fields": {
+      "name": "Montana",
+      "abbr": "MT",
+      "electoral_votes": 3,
+      "popular_votes": 410997,
+      "poll_closing_time": 240,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 207,
+    "fields": {
+      "name": "Nebraska",
+      "abbr": "NE",
+      "electoral_votes": 5,
+      "popular_votes": 697019,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 208,
+    "fields": {
+      "name": "Nevada",
+      "abbr": "NV",
+      "electoral_votes": 4,
+      "popular_votes": 608970,
+      "poll_closing_time": 240,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 209,
+    "fields": {
+      "name": "New Hampshire",
+      "abbr": "NH",
+      "electoral_votes": 4,
+      "popular_votes": 569081,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 210,
+    "fields": {
+      "name": "New Jersey",
+      "abbr": "NJ",
+      "electoral_votes": 15,
+      "popular_votes": 3187226,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 211,
+    "fields": {
+      "name": "New Mexico",
+      "abbr": "NM",
+      "electoral_votes": 5,
+      "popular_votes": 598605,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 212,
+    "fields": {
+      "name": "New York",
+      "abbr": "NY",
+      "electoral_votes": 33,
+      "popular_votes": 6831178,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 213,
+    "fields": {
+      "name": "North Carolina",
+      "abbr": "NC",
+      "electoral_votes": 14,
+      "popular_votes": 2911262,
+      "poll_closing_time": 90,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 214,
+    "fields": {
+      "name": "North Dakota",
+      "abbr": "ND",
+      "electoral_votes": 3,
+      "popular_votes": 288267,
+      "poll_closing_time": 300,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 215,
+    "fields": {
+      "name": "Ohio",
+      "abbr": "OH",
+      "electoral_votes": 21,
+      "popular_votes": 4705457,
+      "poll_closing_time": 90,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 216,
+    "fields": {
+      "name": "Oklahoma",
+      "abbr": "OK",
+      "electoral_votes": 8,
+      "popular_votes": 1234229,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 217,
+    "fields": {
+      "name": "Oregon",
+      "abbr": "OR",
+      "electoral_votes": 7,
+      "popular_votes": 1533968,
+      "poll_closing_time": 300,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 218,
+    "fields": {
+      "name": "Pennsylvania",
+      "abbr": "PA",
+      "electoral_votes": 23,
+      "popular_votes": 4913119,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 219,
+    "fields": {
+      "name": "Rhode Island",
+      "abbr": "RI",
+      "electoral_votes": 4,
+      "popular_votes": 409112,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 220,
+    "fields": {
+      "name": "South Carolina",
+      "abbr": "SC",
+      "electoral_votes": 8,
+      "popular_votes": 1383777,
+      "poll_closing_time": 60,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 221,
+    "fields": {
+      "name": "South Dakota",
+      "abbr": "SD",
+      "electoral_votes": 3,
+      "popular_votes": 316269,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 222,
+    "fields": {
+      "name": "Tennessee",
+      "abbr": "TN",
+      "electoral_votes": 11,
+      "popular_votes": 2076181,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 223,
+    "fields": {
+      "name": "Texas",
+      "abbr": "TX",
+      "electoral_votes": 32,
+      "popular_votes": 6407637,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 224,
+    "fields": {
+      "name": "Utah",
+      "abbr": "UT",
+      "electoral_votes": 5,
+      "popular_votes": 770754,
+      "poll_closing_time": 240,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 225,
+    "fields": {
+      "name": "Vermont",
+      "abbr": "VT",
+      "electoral_votes": 3,
+      "popular_votes": 294308,
+      "poll_closing_time": 60,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 226,
+    "fields": {
+      "name": "Virginia",
+      "abbr": "VA",
+      "electoral_votes": 13,
+      "popular_votes": 2739447,
+      "poll_closing_time": 60,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 227,
+    "fields": {
+      "name": "Washington",
+      "abbr": "WA",
+      "electoral_votes": 11,
+      "popular_votes": 2488745,
+      "poll_closing_time": 300,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 228,
+    "fields": {
+      "name": "Washington DC",
+      "abbr": "DC",
+      "electoral_votes": 3,
+      "popular_votes": 201894,
+      "poll_closing_time": 120,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 229,
+    "fields": {
+      "name": "West Virginia",
+      "abbr": "WV",
+      "electoral_votes": 5,
+      "popular_votes": 648124,
+      "poll_closing_time": 90,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 230,
+    "fields": {
+      "name": "Wisconsin",
+      "abbr": "WI",
+      "electoral_votes": 11,
+      "popular_votes": 2598607,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.state",
+    "pk": 231,
+    "fields": {
+      "name": "Wyoming",
+      "abbr": "WY",
+      "electoral_votes": 3,
+      "popular_votes": 218351,
+      "poll_closing_time": 180,
+      "winner_take_all_flg": 1,
+      "election": 9
+    }
+  }
+]

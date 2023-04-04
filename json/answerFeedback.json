@@ -1,0 +1,1613 @@
+[
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 708,
+    "fields": {
+      "answer": 3310,
+      "candidate": 77,
+      "answer_feedback": "This is a good, conservative answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 709,
+    "fields": {
+      "answer": 3311,
+      "candidate": 77,
+      "answer_feedback": "This is a good, mainstream answer. As always, make sure you balance the need to win moderates against the desires of your core supporters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 710,
+    "fields": {
+      "answer": 3312,
+      "candidate": 77,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 711,
+    "fields": {
+      "answer": 3313,
+      "candidate": 77,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 712,
+    "fields": {
+      "answer": 3314,
+      "candidate": 77,
+      "answer_feedback": "It's important to stick to your principles, but your answer is not calibrated to win a majority of voters in November."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 713,
+    "fields": {
+      "answer": 3315,
+      "candidate": 77,
+      "answer_feedback": "This is a good, conservative answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 714,
+    "fields": {
+      "answer": 3316,
+      "candidate": 77,
+      "answer_feedback": "This is a good, mainstream answer. As always, make sure you balance the need to win moderates against the desires of your core supporters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 715,
+    "fields": {
+      "answer": 3317,
+      "candidate": 77,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 716,
+    "fields": {
+      "answer": 3318,
+      "candidate": 77,
+      "answer_feedback": "A lot of people say that Social Security is the third rail of American politics. You may have made some hard-core conservatives happy, but the vast majority of voters disagree with your stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 717,
+    "fields": {
+      "answer": 3319,
+      "candidate": 77,
+      "answer_feedback": "This is a good, conservative answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 718,
+    "fields": {
+      "answer": 3320,
+      "candidate": 77,
+      "answer_feedback": "This is a good, mainstream answer. As always, make sure you balance the need to win moderates against the desires of your core supporters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 719,
+    "fields": {
+      "answer": 3321,
+      "candidate": 77,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 720,
+    "fields": {
+      "answer": 3322,
+      "candidate": 77,
+      "answer_feedback": "Foreign policy is not a huge issue in this election. Just avoid saying anything too hawkish or dovish so that you don't attract negative attention."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 721,
+    "fields": {
+      "answer": 3323,
+      "candidate": 77,
+      "answer_feedback": "This is a good, mainstream answer on foreign policy."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 722,
+    "fields": {
+      "answer": 3324,
+      "candidate": 77,
+      "answer_feedback": "This is a good, mainstream answer on foreign policy."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 723,
+    "fields": {
+      "answer": 3325,
+      "candidate": 77,
+      "answer_feedback": "Foreign policy is not a huge issue in this election. Just avoid saying anything too hawkish or dovish so that you don't attract negative attention."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 724,
+    "fields": {
+      "answer": 3326,
+      "candidate": 77,
+      "answer_feedback": "You are getting your core voters fired up, but it might be better not to mention Bill Clinton. He's a popular figure in America and you are trying to unseat his heir apparent."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 725,
+    "fields": {
+      "answer": 3327,
+      "candidate": 77,
+      "answer_feedback": "For a Republican, there's nothing wrong with giving a pat phrase and moving to the next topic when it comes to Bill Clinton."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 726,
+    "fields": {
+      "answer": 3328,
+      "candidate": 77,
+      "answer_feedback": "For a Republican, there's nothing wrong with giving a pat phrase and moving to the next topic when it comes to Bill Clinton."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 727,
+    "fields": {
+      "answer": 3329,
+      "candidate": 77,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 728,
+    "fields": {
+      "answer": 3330,
+      "candidate": 77,
+      "answer_feedback": "The Elian issue is simple -- a small, politically active minority in Florida wants him to remain. There is also the issue of supporting or opposing Bill Clinton to consider."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 729,
+    "fields": {
+      "answer": 3331,
+      "candidate": 77,
+      "answer_feedback": "The Elian issue is simple -- a small, politically active minority in Florida wants him to remain. There is also the issue of supporting or opposing Bill Clinton to consider."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 730,
+    "fields": {
+      "answer": 3332,
+      "candidate": 77,
+      "answer_feedback": "The Elian issue is simple -- a small, politically active minority in Florida wants him to remain. There is also the issue of supporting or opposing Bill Clinton to consider."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 731,
+    "fields": {
+      "answer": 3333,
+      "candidate": 77,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 732,
+    "fields": {
+      "answer": 3334,
+      "candidate": 77,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 733,
+    "fields": {
+      "answer": 3335,
+      "candidate": 77,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 734,
+    "fields": {
+      "answer": 3336,
+      "candidate": 77,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 735,
+    "fields": {
+      "answer": 3337,
+      "candidate": 77,
+      "answer_feedback": "It's important to stick to your principles, but your answer is not calibrated to win a majority of voters in November."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 736,
+    "fields": {
+      "answer": 3338,
+      "candidate": 77,
+      "answer_feedback": "This is a good, conservative answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 737,
+    "fields": {
+      "answer": 3340,
+      "candidate": 77,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 738,
+    "fields": {
+      "answer": 3343,
+      "candidate": 77,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 745,
+    "fields": {
+      "answer": 3351,
+      "candidate": 77,
+      "answer_feedback": "This is a good, conservative answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 746,
+    "fields": {
+      "answer": 3352,
+      "candidate": 77,
+      "answer_feedback": "This is a good, mainstream answer. As always, make sure you balance the need to win moderates against the desires of your core supporters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 747,
+    "fields": {
+      "answer": 3354,
+      "candidate": 77,
+      "answer_feedback": "What?! You quickly clarify this statement, but it is too late. You have massively damaged your credibility with your base, and have probably lost a lot of votes to Buchanan or even Gore."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 751,
+    "fields": {
+      "answer": 3359,
+      "candidate": 77,
+      "answer_feedback": "Free trade is an issue that unites the left and far-right in opposition. On the other hand, both main parties generally support it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 752,
+    "fields": {
+      "answer": 3360,
+      "candidate": 77,
+      "answer_feedback": "This is a good, conservative answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 753,
+    "fields": {
+      "answer": 3361,
+      "candidate": 77,
+      "answer_feedback": "Free trade is an issue that unites the left and far-right in opposition. On the other hand, both main parties generally support it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 754,
+    "fields": {
+      "answer": 3362,
+      "candidate": 77,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 755,
+    "fields": {
+      "answer": 3363,
+      "candidate": 77,
+      "answer_feedback": "The consensus view is that the U.S. should continue to strike foreign terrorist networks. Voters don't want to see a U.S. pullback, nor do they wish to see a large-scale conflict or ground invasion."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 756,
+    "fields": {
+      "answer": 3364,
+      "candidate": 77,
+      "answer_feedback": "The consensus view is that the U.S. should continue to strike foreign terrorist networks. Voters don't want to see a U.S. pullback, nor do they wish to see a large-scale conflict or ground invasion."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 757,
+    "fields": {
+      "answer": 3365,
+      "candidate": 77,
+      "answer_feedback": "The consensus view is that the U.S. should continue to strike foreign terrorist networks. Voters don't want to see a U.S. pullback, nor do they wish to see a large-scale conflict or ground invasion."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 758,
+    "fields": {
+      "answer": 3370,
+      "candidate": 77,
+      "answer_feedback": "It's important to stick to your principles, but your answer is not calibrated to win a majority of voters in November."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 759,
+    "fields": {
+      "answer": 3371,
+      "candidate": 77,
+      "answer_feedback": "This is a good, conservative answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 760,
+    "fields": {
+      "answer": 3373,
+      "candidate": 77,
+      "answer_feedback": "What?! You quickly clarify this statement, but it is too late. You have massively damaged your credibility with your base, and have probably lost a lot of votes to Buchanan or even Gore."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 761,
+    "fields": {
+      "answer": 3374,
+      "candidate": 77,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 762,
+    "fields": {
+      "answer": 3375,
+      "candidate": 77,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 763,
+    "fields": {
+      "answer": 3376,
+      "candidate": 77,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 764,
+    "fields": {
+      "answer": 3377,
+      "candidate": 77,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 765,
+    "fields": {
+      "answer": 3379,
+      "candidate": 77,
+      "answer_feedback": "This is a good, conservative answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 771,
+    "fields": {
+      "answer": 3393,
+      "candidate": 77,
+      "answer_feedback": "Americans generally have a decent opinion of Bill Clinton, and your answer might not fit the times that well. However, it will definitely motivate your conservative base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 772,
+    "fields": {
+      "answer": 3394,
+      "candidate": 77,
+      "answer_feedback": "Americans generally have a decent opinion of Bill Clinton and Al Gore, and your answer might not fit the times that well. However, it will definitely motivate your conservative base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 773,
+    "fields": {
+      "answer": 3395,
+      "candidate": 77,
+      "answer_feedback": "This is a theme that will establish you as a moderate, mainstream conservative. To run a national campaign against a popular Administration, this might be the right tone to strike. "
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 774,
+    "fields": {
+      "answer": 3396,
+      "candidate": 77,
+      "answer_feedback": "Americans dislike partisan rancor, but is your speech the answer? What are the details? You also have to worry about alienating conservative supporters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 775,
+    "fields": {
+      "answer": 3405,
+      "candidate": 77,
+      "answer_feedback": "It is probably a bad idea to run against the record of Bill Clinton, given his popularity. Better to just ignore him and focus on other issues."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 776,
+    "fields": {
+      "answer": 3406,
+      "candidate": 77,
+      "answer_feedback": "Ignoring Clinton is a good idea, and the rest of this strategy establishes your conservative bona fides. It could be interesting."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 777,
+    "fields": {
+      "answer": 3407,
+      "candidate": 77,
+      "answer_feedback": "It is risky to run an overtly negative campaign after the recent Clinton-Gingrich battles. It might be better to focus on your own plans for government."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 778,
+    "fields": {
+      "answer": 3408,
+      "candidate": 77,
+      "answer_feedback": "This is a good strategy, if the goal is moving past the Clinton years and presenting yourself as an acceptable mainstream leader."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 779,
+    "fields": {
+      "answer": 3417,
+      "candidate": 77,
+      "answer_feedback": "Alright. Way to get that crowd fired up."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 780,
+    "fields": {
+      "answer": 3418,
+      "candidate": 77,
+      "answer_feedback": "Alright. Way to get that crowd fired up."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 781,
+    "fields": {
+      "answer": 3419,
+      "candidate": 77,
+      "answer_feedback": "Alright. Way to get that crowd fired up."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 782,
+    "fields": {
+      "answer": 3420,
+      "candidate": 77,
+      "answer_feedback": "Alright. Way to get that crowd fired up."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 791,
+    "fields": {
+      "answer": 3453,
+      "candidate": 77,
+      "answer_feedback": "Hopefully you can pull Florida out and win the election. Good luck!"
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 792,
+    "fields": {
+      "answer": 3454,
+      "candidate": 77,
+      "answer_feedback": "Hopefully you can pull Ohio and Pennsylvania out and win the election. Good luck!"
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 793,
+    "fields": {
+      "answer": 3455,
+      "candidate": 77,
+      "answer_feedback": "Hopefully you can pull these states out and win the election. Good luck!"
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 794,
+    "fields": {
+      "answer": 3456,
+      "candidate": 77,
+      "answer_feedback": "Hopefully you can pull these states out and win the election. Good luck!"
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 795,
+    "fields": {
+      "answer": 3464,
+      "candidate": 77,
+      "answer_feedback": "This is widely seen as a poor response to the news that broke. Hopefully you can still win the election."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 796,
+    "fields": {
+      "answer": 3465,
+      "candidate": 77,
+      "answer_feedback": "Your response struck some as too passive and apologetic. Definitely not in character for a potential world leader."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 797,
+    "fields": {
+      "answer": 3466,
+      "candidate": 77,
+      "answer_feedback": "This is probably the best you could do under the circumstances. Good luck!"
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 798,
+    "fields": {
+      "answer": 3467,
+      "candidate": 77,
+      "answer_feedback": "Americans want to hear you address this personally, and not watch as you hide behind a spokeswoman."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 799,
+    "fields": {
+      "answer": 3474,
+      "candidate": 77,
+      "answer_feedback": "This is a good idea for dealing with any issues or questions relating to Bill Clinton."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 800,
+    "fields": {
+      "answer": 3475,
+      "candidate": 77,
+      "answer_feedback": "A lot of moderates blame Republicans as much as or more than Bill Clinton for the partisanship of the 1990s."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 801,
+    "fields": {
+      "answer": 3476,
+      "candidate": 77,
+      "answer_feedback": "This message appeals to solid conservatives only. Clinton is too popular elsewhere."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 802,
+    "fields": {
+      "answer": 3477,
+      "candidate": 77,
+      "answer_feedback": "Some people agree, but many conservatives are wondering what was so moderate about Bill Clinton."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 803,
+    "fields": {
+      "answer": 3478,
+      "candidate": 77,
+      "answer_feedback": "Many people are questioning your credibility and fitness based on this issue. There are too many sources and witnesses for you to deny these things completely."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 804,
+    "fields": {
+      "answer": 3479,
+      "candidate": 77,
+      "answer_feedback": "This is probably the best response you can give, given some of these things that happened when you were young and immature."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 805,
+    "fields": {
+      "answer": 3480,
+      "candidate": 77,
+      "answer_feedback": "It might be better to admit that something happened and address it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 809,
+    "fields": {
+      "answer": 3310,
+      "candidate": 78,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 810,
+    "fields": {
+      "answer": 3313,
+      "candidate": 78,
+      "answer_feedback": "This is a good, liberal answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 811,
+    "fields": {
+      "answer": 3314,
+      "candidate": 78,
+      "answer_feedback": "What?! You quickly clarify this statement, but it is too late. You have massively damaged your credibility with your base, and have probably lost a lot of votes to Nader or even Bush."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 812,
+    "fields": {
+      "answer": 3315,
+      "candidate": 78,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 813,
+    "fields": {
+      "answer": 3317,
+      "candidate": 78,
+      "answer_feedback": "This is a good, liberal answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 814,
+    "fields": {
+      "answer": 3318,
+      "candidate": 78,
+      "answer_feedback": "What?! You quickly clarify this statement, but it is too late. You have massively damaged your credibility with your base, and have probably lost a lot of votes to Nader or even Bush."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 815,
+    "fields": {
+      "answer": 3319,
+      "candidate": 78,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 816,
+    "fields": {
+      "answer": 3322,
+      "candidate": 78,
+      "answer_feedback": "Foreign policy is not a huge issue in this election. Just avoid saying anything too hawkish or dovish so that you don't attract negative attention."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 817,
+    "fields": {
+      "answer": 3323,
+      "candidate": 78,
+      "answer_feedback": "This is a good, mainstream answer on foreign policy."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 818,
+    "fields": {
+      "answer": 3324,
+      "candidate": 78,
+      "answer_feedback": "This is a good, mainstream answer on foreign policy."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 819,
+    "fields": {
+      "answer": 3325,
+      "candidate": 78,
+      "answer_feedback": "Foreign policy is not a huge issue in this election. Just avoid saying anything too hawkish or dovish so that you don't attract negative attention."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 820,
+    "fields": {
+      "answer": 3326,
+      "candidate": 78,
+      "answer_feedback": "It would probably be better not to repudiate Clinton so harshly. Not only is he broadly popular, but you also served with him for eight years."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 821,
+    "fields": {
+      "answer": 3327,
+      "candidate": 78,
+      "answer_feedback": "It would probably be better not to repudiate Clinton so harshly. Not only is he broadly popular, but you also served with him for eight years."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 822,
+    "fields": {
+      "answer": 3329,
+      "candidate": 78,
+      "answer_feedback": "It is a net positive that you are embracing Clinton's legacy. Just keep in mind that there's a trade-off -- some left-wing voters believe that Clinton is too moderate."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 823,
+    "fields": {
+      "answer": 3330,
+      "candidate": 78,
+      "answer_feedback": "The Elian issue is simple -- a small, politically active minority in Florida wants him to remain. There is also the issue of supporting or opposing Bill Clinton to consider."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 824,
+    "fields": {
+      "answer": 3331,
+      "candidate": 78,
+      "answer_feedback": "The Elian issue is simple -- a small, politically active minority in Florida wants him to remain. There is also the issue of supporting or opposing Bill Clinton to consider."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 825,
+    "fields": {
+      "answer": 3332,
+      "candidate": 78,
+      "answer_feedback": "The Elian issue is simple -- a small, politically active minority in Florida wants him to remain. There is also the issue of supporting or opposing Bill Clinton to consider."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 826,
+    "fields": {
+      "answer": 3333,
+      "candidate": 78,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 827,
+    "fields": {
+      "answer": 3334,
+      "candidate": 78,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 828,
+    "fields": {
+      "answer": 3335,
+      "candidate": 78,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 829,
+    "fields": {
+      "answer": 3336,
+      "candidate": 78,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 830,
+    "fields": {
+      "answer": 3337,
+      "candidate": 78,
+      "answer_feedback": "What?! You quickly clarify this statement, but it is too late. You have massively damaged your credibility with your base, and have probably lost a lot of votes to Nader or even Bush."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 831,
+    "fields": {
+      "answer": 3338,
+      "candidate": 78,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 832,
+    "fields": {
+      "answer": 3340,
+      "candidate": 78,
+      "answer_feedback": "It's important to stick to your principles, but your answer is not calibrated to win a majority of voters in November."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 833,
+    "fields": {
+      "answer": 3341,
+      "candidate": 78,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 838,
+    "fields": {
+      "answer": 3351,
+      "candidate": 78,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 839,
+    "fields": {
+      "answer": 3353,
+      "candidate": 78,
+      "answer_feedback": "This is a good, liberal answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 840,
+    "fields": {
+      "answer": 3354,
+      "candidate": 78,
+      "answer_feedback": "It's important to stick to your principles, but your answer is not calibrated to win a majority of voters in November."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 845,
+    "fields": {
+      "answer": 3359,
+      "candidate": 78,
+      "answer_feedback": "Free trade is an issue that unites the left and far-right in opposition. On the other hand, both main parties generally support it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 846,
+    "fields": {
+      "answer": 3360,
+      "candidate": 78,
+      "answer_feedback": "Free trade is an issue that unites the left and far-right in opposition. On the other hand, both main parties generally support it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 847,
+    "fields": {
+      "answer": 3361,
+      "candidate": 78,
+      "answer_feedback": "Free trade is an issue that unites the left and far-right in opposition. On the other hand, both main parties generally support it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 848,
+    "fields": {
+      "answer": 3362,
+      "candidate": 78,
+      "answer_feedback": "Free trade is an issue that unites the left and far-right in opposition. On the other hand, both main parties generally support it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 849,
+    "fields": {
+      "answer": 3363,
+      "candidate": 78,
+      "answer_feedback": "The consensus view is that the U.S. should continue to strike foreign terrorist networks. Voters don't want to see a U.S. pullback, nor do they wish to see a large-scale conflict or ground invasion."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 850,
+    "fields": {
+      "answer": 3364,
+      "candidate": 78,
+      "answer_feedback": "The consensus view is that the U.S. should continue to strike foreign terrorist networks. Voters don't want to see a U.S. pullback, nor do they wish to see a large-scale conflict or ground invasion."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 851,
+    "fields": {
+      "answer": 3365,
+      "candidate": 78,
+      "answer_feedback": "The consensus view is that the U.S. should continue to strike foreign terrorist networks. Voters don't want to see a U.S. pullback, nor do they wish to see a large-scale conflict or ground invasion."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 852,
+    "fields": {
+      "answer": 3366,
+      "candidate": 78,
+      "answer_feedback": "Immigration is not a big issue in this election. There's no reason to make an unforced error like this."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 853,
+    "fields": {
+      "answer": 3367,
+      "candidate": 78,
+      "answer_feedback": "Interesting ideas, but immigration is not a big issue in this election. But no harm, no foul."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 854,
+    "fields": {
+      "answer": 3368,
+      "candidate": 78,
+      "answer_feedback": "Immigration is not a big issue in this election. Better to just focus on your core platform."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 855,
+    "fields": {
+      "answer": 3369,
+      "candidate": 78,
+      "answer_feedback": "Interesting ideas, but immigration is not a big issue in this election. But no harm, no foul."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 856,
+    "fields": {
+      "answer": 3370,
+      "candidate": 78,
+      "answer_feedback": "What?! You quickly clarify this statement, but it is too late. You have massively damaged your credibility with your base, and have probably lost a lot of votes to Nader or even Bush."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 857,
+    "fields": {
+      "answer": 3371,
+      "candidate": 78,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 858,
+    "fields": {
+      "answer": 3373,
+      "candidate": 78,
+      "answer_feedback": "This is a good, liberal answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 859,
+    "fields": {
+      "answer": 3374,
+      "candidate": 78,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 860,
+    "fields": {
+      "answer": 3375,
+      "candidate": 78,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 861,
+    "fields": {
+      "answer": 3376,
+      "candidate": 78,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 862,
+    "fields": {
+      "answer": 3377,
+      "candidate": 78,
+      "answer_feedback": "As a Democrat, there's nothing wrong with showing your support for the Clintons."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 863,
+    "fields": {
+      "answer": 3378,
+      "candidate": 78,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 864,
+    "fields": {
+      "answer": 3379,
+      "candidate": 78,
+      "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 870,
+    "fields": {
+      "answer": 3389,
+      "candidate": 78,
+      "answer_feedback": "This is a good, liberal answer that will motivate your base. As always, make sure you find the right balance between getting your troops out and appealing to undecided voters."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 904,
+    "fields": {
+      "answer": 3310,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 905,
+    "fields": {
+      "answer": 3311,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 906,
+    "fields": {
+      "answer": 3313,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 907,
+    "fields": {
+      "answer": 3314,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 908,
+    "fields": {
+      "answer": 3315,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 909,
+    "fields": {
+      "answer": 3317,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 910,
+    "fields": {
+      "answer": 3318,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 911,
+    "fields": {
+      "answer": 3319,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 912,
+    "fields": {
+      "answer": 3321,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 913,
+    "fields": {
+      "answer": 3322,
+      "candidate": 79,
+      "answer_feedback": "This is a good answer for a Green Party candidate."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 914,
+    "fields": {
+      "answer": 3323,
+      "candidate": 79,
+      "answer_feedback": "The best course for a Green Party candidate is to oppose foreign intervention under almost all circumstances."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 915,
+    "fields": {
+      "answer": 3324,
+      "candidate": 79,
+      "answer_feedback": "The best course for a Green Party candidate is to oppose foreign intervention under almost all circumstances."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 916,
+    "fields": {
+      "answer": 3325,
+      "candidate": 79,
+      "answer_feedback": "The best course for a Green Party candidate is to oppose foreign intervention under almost all circumstances."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 917,
+    "fields": {
+      "answer": 3326,
+      "candidate": 79,
+      "answer_feedback": "It's probably best to ignore Bill Clinton, and focus your statements on Bush, Gore, and the two-party system in general."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 918,
+    "fields": {
+      "answer": 3327,
+      "candidate": 79,
+      "answer_feedback": "It's probably best to ignore Bill Clinton, and focus your statements on Bush, Gore, and the two-party system in general."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 919,
+    "fields": {
+      "answer": 3328,
+      "candidate": 79,
+      "answer_feedback": "It's probably best to ignore Bill Clinton, and focus your statements on Bush, Gore, and the two-party system in general."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 920,
+    "fields": {
+      "answer": 3329,
+      "candidate": 79,
+      "answer_feedback": "It's probably best to ignore Bill Clinton, and focus your statements on Bush, Gore, and the two-party system in general."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 921,
+    "fields": {
+      "answer": 3330,
+      "candidate": 79,
+      "answer_feedback": "The Elian issue is simple -- a small, politically active minority in Florida wants him to remain. There is also the issue of supporting or opposing Bill Clinton to consider."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 922,
+    "fields": {
+      "answer": 3331,
+      "candidate": 79,
+      "answer_feedback": "The Elian issue is simple -- a small, politically active minority in Florida wants him to remain. There is also the issue of supporting or opposing Bill Clinton to consider."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 923,
+    "fields": {
+      "answer": 3332,
+      "candidate": 79,
+      "answer_feedback": "The Elian issue is simple -- a small, politically active minority in Florida wants him to remain. There is also the issue of supporting or opposing Bill Clinton to consider."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 924,
+    "fields": {
+      "answer": 3333,
+      "candidate": 79,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 925,
+    "fields": {
+      "answer": 3334,
+      "candidate": 79,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 926,
+    "fields": {
+      "answer": 3335,
+      "candidate": 79,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 927,
+    "fields": {
+      "answer": 3336,
+      "candidate": 79,
+      "answer_feedback": "Support and opposition to the Serbia air strikes is all over the place. Mainstream politicians support the action, while a combination of anti-war leftists and anti-Clinton Republicans oppose it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 928,
+    "fields": {
+      "answer": 3337,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 929,
+    "fields": {
+      "answer": 3338,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 930,
+    "fields": {
+      "answer": 3340,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 931,
+    "fields": {
+      "answer": 3341,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 932,
+    "fields": {
+      "answer": 3343,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 938,
+    "fields": {
+      "answer": 3351,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 939,
+    "fields": {
+      "answer": 3352,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 940,
+    "fields": {
+      "answer": 3354,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 944,
+    "fields": {
+      "answer": 3359,
+      "candidate": 79,
+      "answer_feedback": "Free trade is an issue that unites the left and far-right in opposition. On the other hand, both main parties generally support it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 945,
+    "fields": {
+      "answer": 3360,
+      "candidate": 79,
+      "answer_feedback": "Free trade is an issue that unites the left and far-right in opposition. On the other hand, both main parties generally support it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 946,
+    "fields": {
+      "answer": 3361,
+      "candidate": 79,
+      "answer_feedback": "Free trade is an issue that unites the left and far-right in opposition. On the other hand, both main parties generally support it."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 947,
+    "fields": {
+      "answer": 3362,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 948,
+    "fields": {
+      "answer": 3363,
+      "candidate": 79,
+      "answer_feedback": "The best course for a Green Party candidate is to oppose foreign intervention under almost all circumstances."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 949,
+    "fields": {
+      "answer": 3364,
+      "candidate": 79,
+      "answer_feedback": "The best course for a Green Party candidate is to oppose foreign intervention under almost all circumstances."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 950,
+    "fields": {
+      "answer": 3365,
+      "candidate": 79,
+      "answer_feedback": "The best course for a Green Party candidate is to oppose foreign intervention under almost all circumstances."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 951,
+    "fields": {
+      "answer": 3366,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 952,
+    "fields": {
+      "answer": 3369,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 953,
+    "fields": {
+      "answer": 3370,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 954,
+    "fields": {
+      "answer": 3371,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 955,
+    "fields": {
+      "answer": 3373,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 956,
+    "fields": {
+      "answer": 3374,
+      "candidate": 79,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 957,
+    "fields": {
+      "answer": 3375,
+      "candidate": 79,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 958,
+    "fields": {
+      "answer": 3376,
+      "candidate": 79,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 959,
+    "fields": {
+      "answer": 3377,
+      "candidate": 79,
+      "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 960,
+    "fields": {
+      "answer": 3378,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 961,
+    "fields": {
+      "answer": 3379,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 962,
+    "fields": {
+      "answer": 3380,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 968,
+    "fields": {
+      "answer": 3388,
+      "candidate": 79,
+      "answer_feedback": "What?! The purpose of your candidacy is to provide a solid, left-wing alternative to the two main parties. People are wondering what you meant by taking this stance."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 969,
+    "fields": {
+      "answer": 3389,
+      "candidate": 79,
+      "answer_feedback": "This is a good, left-wing answer that will motivate your base."
+    }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 998,
+    "fields": {
+      "answer": 3388,
+      "candidate": 78,
+      "answer_feedback": "This stance helps you in a couple of coal states, but definitely raises eyebrows among the mainstream left."
+    }
+  }
+]

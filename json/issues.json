@@ -1,0 +1,117 @@
+[
+  {
+    "model": "campaign_trail.issue",
+    "pk": 27,
+    "fields": {
+      "name": "Budget Surplus",
+      "description": "",
+      "stance_1": "Very Conservative",
+      "stance_desc_1": "",
+      "stance_2": "Conservative",
+      "stance_desc_2": "",
+      "stance_3": "Conservative",
+      "stance_desc_3": "",
+      "stance_4": "Moderate",
+      "stance_desc_4": "",
+      "stance_5": "Liberal",
+      "stance_desc_5": "",
+      "stance_6": "Liberal",
+      "stance_desc_6": "",
+      "stance_7": "Very Liberal",
+      "stance_desc_7": "",
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.issue",
+    "pk": 28,
+    "fields": {
+      "name": "Social Security",
+      "description": "",
+      "stance_1": "Very Conservative",
+      "stance_desc_1": "",
+      "stance_2": "Conservative",
+      "stance_desc_2": "",
+      "stance_3": "Conservative",
+      "stance_desc_3": "",
+      "stance_4": "Moderate",
+      "stance_desc_4": "",
+      "stance_5": "Liberal",
+      "stance_desc_5": "",
+      "stance_6": "Liberal",
+      "stance_desc_6": "",
+      "stance_7": "Very Liberal",
+      "stance_desc_7": "",
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.issue",
+    "pk": 29,
+    "fields": {
+      "name": "Education",
+      "description": "",
+      "stance_1": "Very Conservative",
+      "stance_desc_1": "",
+      "stance_2": "Conservative",
+      "stance_desc_2": "",
+      "stance_3": "Conservative",
+      "stance_desc_3": "",
+      "stance_4": "Moderate",
+      "stance_desc_4": "",
+      "stance_5": "Liberal",
+      "stance_desc_5": "",
+      "stance_6": "Liberal",
+      "stance_desc_6": "",
+      "stance_7": "Very Liberal",
+      "stance_desc_7": "",
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.issue",
+    "pk": 30,
+    "fields": {
+      "name": "Foreign Policy",
+      "description": "",
+      "stance_1": "Very Conservative",
+      "stance_desc_1": "",
+      "stance_2": "Conservative",
+      "stance_desc_2": "",
+      "stance_3": "Conservative",
+      "stance_desc_3": "",
+      "stance_4": "Moderate",
+      "stance_desc_4": "",
+      "stance_5": "Liberal",
+      "stance_desc_5": "",
+      "stance_6": "Liberal",
+      "stance_desc_6": "",
+      "stance_7": "Very Liberal",
+      "stance_desc_7": "",
+      "election": 9
+    }
+  },
+  {
+    "model": "campaign_trail.issue",
+    "pk": 31,
+    "fields": {
+      "name": "Bill Clinton",
+      "description": "",
+      "stance_1": "Very Unpopular",
+      "stance_desc_1": "",
+      "stance_2": "Unpopular",
+      "stance_desc_2": "",
+      "stance_3": "Unpopular",
+      "stance_desc_3": "",
+      "stance_4": "Neutral",
+      "stance_desc_4": "",
+      "stance_5": "Popular",
+      "stance_desc_5": "",
+      "stance_6": "Popular",
+      "stance_desc_6": "",
+      "stance_7": "Very Popular",
+      "stance_desc_7": "",
+      "election": 9
+    }
+  }
+]

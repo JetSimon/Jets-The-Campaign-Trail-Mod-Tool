@@ -1,0 +1,227 @@
+[
+  {
+    "model": "campaign_trail.question",
+    "pk": 393,
+    "fields": {
+      "priority": 0,
+      "description": "Today you have announced the selection of Dick Cheney as running mate. Can you speak more about him?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 369,
+    "fields": {
+      "priority": 1,
+      "description": "What is your overall strategy for the 2000 campaign?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 366,
+    "fields": {
+      "priority": 1,
+      "description": "What key points will you emphasize as you accept your party's nomination for President of the United States?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 351,
+    "fields": {
+      "priority": 2,
+      "description": "What are your thoughts on the USS Cole bombing, which has killed 17 American sailors. How should we prevent such incidents of terrorism in the future?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 344,
+    "fields": {
+      "priority": 2,
+      "description": "Which of the following best describes your position on education?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 350,
+    "fields": {
+      "priority": 2,
+      "description": "Do you have any plans to change American tax policy?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 349,
+    "fields": {
+      "priority": 2,
+      "description": "Did you support Bill Clinton's actions leading to the bombing of Serbia?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 346,
+    "fields": {
+      "priority": 2,
+      "description": "What is your vision for the foreign policy of this country?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 347,
+    "fields": {
+      "priority": 2,
+      "description": "Do you have any thoughts on the Bill Clinton scandal that you would like to share?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 343,
+    "fields": {
+      "priority": 2,
+      "description": "Which of the following best describes your position on the $200 billion surplus that is projected for this year?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 345,
+    "fields": {
+      "priority": 2,
+      "description": "Which of the following best describes your position on Social Security?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 348,
+    "fields": {
+      "priority": 2,
+      "description": "Do you believe that Elian Gonzalez should have been returned to Cuba?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 354,
+    "fields": {
+      "priority": 3,
+      "description": "Do you have any plans to help America's seniors better pay for vital prescription drugs?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 388,
+    "fields": {
+      "priority": 3,
+      "description": "Do you have anything to say about your alleged drug use in the 1970s?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 359,
+    "fields": {
+      "priority": 3,
+      "description": "What is your position on abortion?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 357,
+    "fields": {
+      "priority": 3,
+      "description": "Do you support the air strikes and sanctions that have been levied against Iraq, with the goal of weakening Saddam Hussein?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 358,
+    "fields": {
+      "priority": 3,
+      "description": "Do you have any plans to address or change immigration policy if elected President?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 364,
+    "fields": {
+      "priority": 3,
+      "description": "Do you think that new regulations from Bill Clinton have unfairly hurt coal-producing states?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 387,
+    "fields": {
+      "priority": 3,
+      "description": "What is your opinion on the performance and conduct of our current President, Bill Clinton?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 372,
+    "fields": {
+      "priority": 3,
+      "description": "Another day, another rally on the campaign trail. What do you prefer to talk about today?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 360,
+    "fields": {
+      "priority": 3,
+      "description": "Do you believe it is appropriate for Hillary Clinton to run for Senate in the state of New York -- a state where she has never lived?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 361,
+    "fields": {
+      "priority": 3,
+      "description": "Should low-income parents be able to use federal vouchers to send their children to private schools?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 356,
+    "fields": {
+      "priority": 3,
+      "description": "What is your position on American trade policy? How do you feel about the World Trade Organization or NAFTA?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 384,
+    "fields": {
+      "priority": -2,
+      "description": "It is November 2nd, only five days before the voting. News has just broken that you were arrested for drunken driving in 1976. What is your response?",
+      "likelihood": 1.0
+    }
+  },
+  {
+    "model": "campaign_trail.question",
+    "pk": 381,
+    "fields": {
+      "priority": -1,
+      "description": "Where will you make the final stop(s) of your campaign before the voting begins?",
+      "likelihood": 1.0
+    }
+  }
+]
