@@ -19,6 +19,9 @@ class TCTData:
     def get_answers_for_question(self, pk):
         return [answer for answer in self.answers.values() if answer['fields']['question'] == pk]
 
+    def get_advisor_feedback_for_answer(self, pk):
+        return [feedback for feedback in self.answer_feedback if feedback['fields']['answer'] == pk]
+
 def load_data(folder_name):
     questions = {}
     answers = {}

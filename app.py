@@ -17,7 +17,7 @@ question = data.questions[question_pks[0]]
 layout = create_question_layout(data, question, current_answers, question_pks)
 
 # Create the window
-window = sg.Window("Jet's TCT Mod Maker", layout)
+window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800))
 
 def save_question():
     pk = question['pk']
@@ -44,7 +44,7 @@ while True:
         new_question_pk = values['question_picker'][0]
         question = data.questions[new_question_pk]
         layout = create_question_layout(data, question, current_answers, question_pks)
-        new_window = sg.Window("Jet's TCT Mod Maker", layout)
+        new_window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800))
         window.close()
         window = new_window
     elif event == "Save Question":

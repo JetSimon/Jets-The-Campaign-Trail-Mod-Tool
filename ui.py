@@ -13,18 +13,32 @@ def create_question_layout(data, question, current_answers, question_pks):
         [sg.Text("Description")],
         [sg.Multiline(default_text=question['fields']['description'], size=(80,5), key="description")],
         [sg.Text("Likelihood")],
-        [sg.Input(default_text=question['fields']['likelihood'], key="likelihood")]
+        [sg.Input(default_text=question['fields']['likelihood'], key="likelihood")],
+        [sg.Text("Answers", font=("Helvetica", 12, "bold"))]
     ]
 
     i = 0
+
     for answer in data.get_answers_for_question(question['pk']):
+        col_ans = []
         current_answers.append(answer)
-        col2.append([sg.Text(f"Answer PK {answer['pk']}", font=("Helvetica", 12, "bold"))])
-        col2.append([sg.Text("Description")])
-        col2.append([sg.Multiline(default_text=answer['fields']['description'], size=(80, 5), key=f"description_ans{i}")])
+        col_ans.append([sg.Text("Description")])
+        col_ans.append([sg.Multiline(default_text=answer['fields']['description'], size=(80, 5), key=f"description_ans{i}")])
         i += 1
+
+        j = 0
+        for feedback in data.get_advisor_feedback_for_answer(answer['pk']):
+            col = []
+            col.append([sg.Text("Candidate")])
+            col.append([sg.Input(default_text=feedback['fields']['candidate'], key=f"candidate_ans{i}_feedback_{j}")])
+            col.append([sg.Text("Answer Feedback")])
+            col.append([sg.Multiline(default_text=feedback['fields']['answer_feedback'], size=(80, 5), key=f"description_ans{i}_feedback_{j}")])
+            col_ans.append([sg.Frame(f"Feedback PK {feedback['pk']}", col)])
+        j += 1
+
+        col2.append([sg.Frame(f"Answer PK {answer['pk']}", col_ans)])
 
     col2.append([sg.Button("Save Changes", key="Save Question")])
 
-    layout = [[sg.Column(col1, vertical_alignment="t"), sg.Column(col2)]]
+    layout = [[sg.Column(col1, vertical_alignment="t"), sg.Column(col2, scrollable=True, vertical_scroll_only=True, expand_x=True,vertical_alignment="t")]]
     return layout
