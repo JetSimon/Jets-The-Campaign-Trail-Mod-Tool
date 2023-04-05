@@ -1,7 +1,7 @@
 import json
 import os
 import re
-
+import pyperclip
 class TCTData:
     def __init__(self, questions, answers, issues, state_issue_scores, candidate_issue_score, running_mate_issue_score, candidate_state_multiplier, answer_score_global, answer_score_issue, answer_score_state, answer_feedback, states):
         self.questions = questions
@@ -116,8 +116,8 @@ class TCTData:
 def extract_json(f, start, end):
 
     if(start not in f):
-        print("ERROR: Start not in f")
-        return None
+        print(f"ERROR: Start [{start}] not in file provided, returning none")
+        return {}
 
     raw = f.strip().split(start)[1].split(end)[0].strip()
 
@@ -127,11 +127,12 @@ def extract_json(f, start, end):
     if raw[-1] == '"' or raw[-1] == "'":
         raw = raw[:len(raw)-1]
 
-    res = json.loads(raw)
-
-    if res == None:
-        print("ERROR: Loading json was null, copied to clipboard")
-        print(raw)
+    try:
+        res = json.loads(raw)
+    except:
+        res = {}
+        print(f"Ran into error parsing JSON for start [{start}]. Copying raw to clipboard.")
+        pyperclip.copy(raw)
 
     return res
 
@@ -166,7 +167,7 @@ def load_data_from_file(file_name):
     raw_json = re.sub(' +', ' ', raw_json)
     raw_json = raw_json.replace('\\"', '"')
     raw_json = raw_json.replace("\\'", "'")
-    #raw_json = raw_json.replace("'", '"')
+    raw_json = raw_json.replace("\\\\", "\\")
 
     states_json = extract_json(raw_json, "campaignTrail_temp.states_json = JSON.parse(", ");")
     for state in states_json:
