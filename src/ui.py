@@ -14,6 +14,7 @@ def create_question_layout(data, question, current_answers):
         [sg.Multiline(default_text=question['fields']['description'], size=(80,5), key="description")],
         [sg.Text("Likelihood")],
         [sg.Input(default_text=question['fields']['likelihood'], key="likelihood")],
+        [sg.Button("Add Answer", enable_events="True", key="add_answer")],
         [sg.Text("Answers", font=("Helvetica", 12, "bold"))]
     ]
 
@@ -25,6 +26,8 @@ def create_question_layout(data, question, current_answers):
         frame_ans.append([sg.Text("Description")])
         frame_ans.append([sg.Multiline(default_text=answer['fields']['description'], size=(80, 5), key=f"description_ans{i}")])
 
+
+        frame_ans.append([sg.Button("Add New Feedback", enable_events=True, key=f"answer_add_feedback_{answer['pk']}")])
         # add feedback
         j = 0
         for feedback in data.get_advisor_feedback_for_answer(answer['pk']):
@@ -36,6 +39,7 @@ def create_question_layout(data, question, current_answers):
             frame_ans.append([sg.Frame(f"Feedback PK {feedback['pk']}", frame)])
             j += 1
 
+        frame_ans.append([sg.Button("Add New Global Score", enable_events=True, key=f"answer_add_global_score_{answer['pk']}")])
         # add global score
         j = 0
         for x in data.get_global_score_for_answer(answer['pk']):
@@ -53,6 +57,7 @@ def create_question_layout(data, question, current_answers):
             frame_ans.append([sg.Frame(f"Global Answer Score PK {x['pk']}", frame)])
             j += 1
 
+        frame_ans.append([sg.Button("Add New Issue Score", enable_events=True, key=f"answer_add_issue_score_{answer['pk']}")])
         # add issue score
         j = 0
         for x in data.get_issue_score_for_answer(answer['pk']):
@@ -70,6 +75,7 @@ def create_question_layout(data, question, current_answers):
             frame_ans.append([sg.Frame(f"Issue Answer Score PK {x['pk']}", frame)])
             j += 1
 
+        frame_ans.append([sg.Button("Add New State Score", enable_events=True, key=f"answer_add_state_score_{answer['pk']}")])
         # add state score
         j = 0
         for x in data.get_state_score_for_answer(answer['pk']):

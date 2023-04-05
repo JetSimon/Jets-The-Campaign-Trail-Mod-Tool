@@ -65,11 +65,19 @@ def save_question():
 
     i = 0
     for answer in current_answers:
+
+        if f"description_ans{i}" not in window.AllKeysDict:
+            i+=1
+            continue
+
         ans_pk = answer['pk']
         data.answers[ans_pk]['fields']['description'] = window[f"description_ans{i}"].get()
         
         j = 0
         for feedback in data.get_advisor_feedback_for_answer(ans_pk):
+            if f"candidate_ans{i}_feedback_{j}" not in window.AllKeysDict:
+                j += 1
+                continue
             feedback_pk = feedback['pk']
             data.answer_feedback[feedback_pk]['fields']['candidate'] = int(window[f"candidate_ans{i}_feedback_{j}"].get())
             data.answer_feedback[feedback_pk]['fields']['answer_feedback'] = window[f"description_ans{i}_feedback_{j}"].get()
@@ -78,6 +86,9 @@ def save_question():
          # add global score
         j = 0
         for x in data.get_global_score_for_answer(answer['pk']):
+            if f"ans{i}_global_score_candidate_{j}" not in window.AllKeysDict:
+                j += 1
+                continue
             pk = x['pk']
             data.answer_score_global[pk]['fields']['candidate'] = int(window[f"ans{i}_global_score_candidate_{j}"].get())
             data.answer_score_global[pk]['fields']['affected_candidate'] = int(window[f"ans{i}_global_score_affected_candidate_{j}"].get())
@@ -87,6 +98,9 @@ def save_question():
         # add issue score
         j = 0
         for x in data.get_issue_score_for_answer(answer['pk']):
+            if f"ans{i}_issue_score_issue_{j}" not in window.AllKeysDict:
+                j += 1
+                continue
             pk = x['pk']
             data.answer_score_issue[pk]['fields']['issue'] = int(window[f"ans{i}_issue_score_issue_{j}"].get())
             data.answer_score_issue[pk]['fields']['issue_score'] = float(window[f"ans{i}_issue_score_issue_score_{j}"].get())
@@ -96,7 +110,14 @@ def save_question():
         # add state score
         j = 0
         for x in data.get_state_score_for_answer(answer['pk']):
-
+            if f"ans{i}_state_score_state_{j}" not in window.AllKeysDict:
+                j += 1
+                continue
+            pk = x['pk']
+            data.answer_score_state[pk]['fields']['state'] = int(window[f"ans{i}_state_score_state_{j}"].get())
+            data.answer_score_state[pk]['fields']['candidate'] = int(window[f"ans{i}_state_score_candidate_{j}"].get())
+            data.answer_score_state[pk]['fields']['affected_candidate'] = int(window[f"ans{i}_state_score_affected_candidate_{j}"].get())
+            data.answer_score_state[pk]['fields']['state_multiplier'] = float(window[f"ans{i}_state_score_state_multiplier_{j}"].get())
             j += 1
         i += 1
 
@@ -201,6 +222,96 @@ while True:
     elif event == "export2":
         print("export " + values['export2'])
         export_data(values['export2'])
+    elif event == "add_answer":
+        new_answer =  {
+            "model": "campaign_trail.answer",
+            "pk": data.get_new_pk(),
+            "fields": {
+                "question": question['pk'],
+                "description": "[put description here]"
+            }
+        }
+
+        new_feedback = {
+            "model": "campaign_trail.answer_feedback",
+            "pk": data.get_new_pk(),
+            "fields": {
+                "answer": new_answer['pk'],
+                "candidate": 0,
+                "answer_feedback": "[put feedback here, don't forget to change candidate]"
+            }
+        } 
+
+        data.answer_feedback[new_feedback['pk']] = new_feedback
+        data.answers[new_answer['pk']] = new_answer
+
+        window.write_event_value("question_picker", [question['pk']])
+    elif "answer_add_feedback_" in event:
+        answer_pk = int(event.split("answer_add_feedback_")[1])
+        
+        new_feedback = {
+            "model": "campaign_trail.answer_feedback",
+            "pk": data.get_new_pk(),
+            "fields": {
+                "answer": answer_pk,
+                "candidate": 0,
+                "answer_feedback": "[put feedback here, don't forget to change candidate]"
+            }
+        }
+
+        data.answer_feedback[new_feedback['pk']] = new_feedback
+
+        window.write_event_value("question_picker", [question['pk']])
+    elif "answer_add_global_score_" in event:
+        answer_pk = int(event.split("answer_add_global_score_")[1])
+        
+        x = {
+            "model": "campaign_trail.answer_score_global",
+            "pk": data.get_new_pk(),
+            "fields": {
+                "answer": answer_pk,
+                "candidate": 0,
+                "affected_candidate": 0,
+                "global_multiplier": 0
+            }
+        }
+
+        data.answer_score_global[x['pk']] = x
+
+        window.write_event_value("question_picker", [question['pk']])
+    elif "answer_add_issue_score_" in event:
+        answer_pk = int(event.split("answer_add_issue_score_")[1])
+        
+        x = {
+            "model": "campaign_trail.answer_score_issue",
+            "pk": data.get_new_pk(),
+            "fields": {
+                "answer": answer_pk,
+                "issue": 0,
+                "issue_score": 0,
+                "issue_importance": 0
+            }
+        }
+
+        data.answer_score_issue[x['pk']] = x
+        window.write_event_value("question_picker", [question['pk']])
+    elif "answer_add_state_score_" in event:
+        answer_pk = int(event.split("answer_add_state_score_")[1])
+        
+        x = {
+            "model": "campaign_trail.answer_score_state",
+            "pk": data.get_new_pk(),
+            "fields": {
+                "answer": answer_pk,
+                "state": 0,
+                "candidate": 0,
+                "affected_candidate": 0,
+                "state_multiplier": 0
+            }
+        }
+
+        data.answer_score_state[x['pk']] = x
+        window.write_event_value("question_picker", [question['pk']])
     
 
 window.close()

@@ -3,7 +3,8 @@ import os
 import re
 import pyperclip
 class TCTData:
-    def __init__(self, questions, answers, issues, state_issue_scores, candidate_issue_score, running_mate_issue_score, candidate_state_multiplier, answer_score_global, answer_score_issue, answer_score_state, answer_feedback, states):
+    def __init__(self, questions, answers, issues, state_issue_scores, candidate_issue_score, running_mate_issue_score, candidate_state_multiplier, answer_score_global, answer_score_issue, answer_score_state, answer_feedback, states, highest_pk):
+        self.highest_pk = highest_pk
         self.questions = questions
         self.answers = answers
         self.issues = issues
@@ -16,6 +17,11 @@ class TCTData:
         self.answer_score_state = answer_score_state
         self.answer_feedback = answer_feedback
         self.states = states
+
+    def get_new_pk(self):
+        pk = self.highest_pk + 1
+        self.highest_pk = pk
+        return pk
 
     def save_as_code_2(self, path):
         temp = None
@@ -142,6 +148,8 @@ def load_data_from_file(file_name):
         print("No data file exists, just making empty data")
         return TCTData({},{},{},{},{},{},{},{},{},{},{},{})
 
+    highest_pk = -1
+
     questions = {}
     answers = {}
     states = {}
@@ -171,66 +179,78 @@ def load_data_from_file(file_name):
 
     states_json = extract_json(raw_json, "campaignTrail_temp.states_json = JSON.parse(", ");")
     for state in states_json:
+        highest_pk = max(highest_pk, state["pk"])
         states[state["pk"]] = state
 
     questions_json = extract_json(raw_json, "campaignTrail_temp.questions_json = JSON.parse(", ");")
     for question in questions_json:
+        highest_pk = max(highest_pk, question["pk"])
         question['fields']['description'] = question['fields']['description'].replace("â€™", "'").replace("â€”", "—")
         questions[question["pk"]] = question
 
     answers_json = extract_json(raw_json, "campaignTrail_temp.answers_json = JSON.parse(", ");")
     for answer in answers_json:
+        highest_pk = max(highest_pk, answer["pk"])
         answer['fields']['description'] = answer['fields']['description'].replace("â€™", "'").replace("â€”", "—")
         key = answer["pk"]
         answers[key] = answer
 
     answer_feedbacks_json = extract_json(raw_json, "campaignTrail_temp.answer_feedback_json = JSON.parse(", ");")
     for feedback in answer_feedbacks_json:
+        highest_pk = max(highest_pk, feedback["pk"])
         feedback['fields']['answer_feedback'] = feedback['fields']['answer_feedback'].replace("â€™", "'").replace("â€”", "—")
         key = feedback['pk']
         feedbacks[key] = feedback
 
     answer_score_globals_json = extract_json(raw_json, "campaignTrail_temp.answer_score_global_json = JSON.parse(", ");")
     for x in answer_score_globals_json:
+        highest_pk = max(highest_pk, x["pk"])
         key = x['pk']
         answer_score_globals[key] = x
 
     answer_score_issues_json = extract_json(raw_json, "campaignTrail_temp.answer_score_issue_json = JSON.parse(", ");")
     for x in answer_score_issues_json:
+        highest_pk = max(highest_pk, x["pk"])
         key = x['pk']
         answer_score_issues[key] = x
 
     answer_score_states_json = extract_json(raw_json, "campaignTrail_temp.answer_score_state_json = JSON.parse(", ");")
     for x in answer_score_states_json:
+        highest_pk = max(highest_pk, x["pk"])
         key = x['pk']
         answer_score_states[key] = x
 
     candidate_issue_scores_json = extract_json(raw_json, "campaignTrail_temp.candidate_issue_score_json = JSON.parse(", ");")
     for x in candidate_issue_scores_json:
+        highest_pk = max(highest_pk, x["pk"])
         key = x['pk']
         candidate_issue_scores[key] = x
 
     candidate_state_multipliers_json = extract_json(raw_json, "campaignTrail_temp.candidate_state_multiplier_json = JSON.parse(", ");")
     for x in candidate_state_multipliers_json:
+        highest_pk = max(highest_pk, x["pk"])
         key = x['pk']
         candidate_state_multipliers[key] = x
 
     running_mate_issue_scores_json = extract_json(raw_json, "campaignTrail_temp.running_mate_issue_score_json = JSON.parse(", ");")
     for x in running_mate_issue_scores_json:
+        highest_pk = max(highest_pk, x["pk"])
         key = x['pk']
         running_mate_issue_scores[key] = x
 
     state_issue_scores_json = extract_json(raw_json, "campaignTrail_temp.state_issue_score_json = JSON.parse(", ");")
     for x in state_issue_scores_json:
+        highest_pk = max(highest_pk, x["pk"])
         key = x['pk']
         state_issue_scores[key] = x
 
     issues_json = extract_json(raw_json, "campaignTrail_temp.issues_json = JSON.parse(", ");")
     for x in issues_json:
+        highest_pk = max(highest_pk, x["pk"])
         key = x['pk']
         issues[key] = x
 
-    data = TCTData(questions, answers, issues, state_issue_scores, candidate_issue_scores, running_mate_issue_scores, candidate_state_multipliers, answer_score_globals, answer_score_issues, answer_score_states, feedbacks, states)
+    data = TCTData(questions, answers, issues, state_issue_scores, candidate_issue_scores, running_mate_issue_scores, candidate_state_multipliers, answer_score_globals, answer_score_issues, answer_score_states, feedbacks, states, highest_pk)
 
     return data
 
@@ -339,6 +359,6 @@ def load_data(folder_name):
         issues[key] = x
     f.close()
 
-    data = TCTData(questions, answers, issues, state_issue_scores, candidate_issue_scores, running_mate_issue_scores, candidate_state_multipliers, answer_score_globals, answer_score_issues, answer_score_states, feedbacks, states)
+    data = TCTData(questions, answers, issues, state_issue_scores, candidate_issue_scores, running_mate_issue_scores, candidate_state_multipliers, answer_score_globals, answer_score_issues, answer_score_states, feedbacks, states, 9999)
 
     return data
