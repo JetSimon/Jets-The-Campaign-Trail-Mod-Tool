@@ -6,3 +6,4 @@
 - Reorganized repo structure (src folder)
 - Added ability to add answers and answer fields
 - Added ability to delete answers
+- Added ability to delete answer fields

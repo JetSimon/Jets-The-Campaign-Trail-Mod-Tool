@@ -36,6 +36,7 @@ def create_question_layout(data, question, current_answers):
             frame.append([sg.Input(default_text=feedback['fields']['candidate'], key=f"candidate_ans{i}_feedback_{j}")])
             frame.append([sg.Text("Answer Feedback")])
             frame.append([sg.Multiline(default_text=feedback['fields']['answer_feedback'], size=(80, 5), key=f"description_ans{i}_feedback_{j}")])
+            frame.append([sg.Button("Delete Feedback", enable_events=True, button_color="red", key=f"answer_delete_feedback_{feedback['pk']}")])
             frame_ans.append([sg.Frame(f"Feedback PK {feedback['pk']}", frame)])
             j += 1
 
@@ -54,6 +55,8 @@ def create_question_layout(data, question, current_answers):
             frame.append([sg.Text("Global Multiplier")])
             frame.append([sg.Input(default_text=x['fields']['global_multiplier'], key=f"ans{i}_global_score_multiplier_{j}")])
             
+            frame.append([sg.Button("Delete Global Score", enable_events=True, button_color="red", key=f"answer_delete_global_score_{x['pk']}")])
+
             frame_ans.append([sg.Frame(f"Global Answer Score PK {x['pk']}", frame)])
             j += 1
 
@@ -72,6 +75,8 @@ def create_question_layout(data, question, current_answers):
             frame.append([sg.Text("Issue Importance")])
             frame.append([sg.Input(default_text=x['fields']['issue_importance'], key=f"ans{i}_issue_score_issue_importance_{j}")])
             
+            frame.append([sg.Button("Delete Issue Score", enable_events=True, button_color="red", key=f"answer_delete_issue_score_{x['pk']}")])
+
             frame_ans.append([sg.Frame(f"Issue Answer Score PK {x['pk']}", frame)])
             j += 1
 
@@ -93,7 +98,9 @@ def create_question_layout(data, question, current_answers):
             frame.append([sg.Text("State Multiplier")])
             frame.append([sg.Input(default_text=x['fields']['state_multiplier'], key=f"ans{i}_state_score_state_multiplier_{j}")])
 
-            frame_ans.append([sg.Frame(f"Issue Answer Score PK {x['pk']}", frame)])
+            frame.append([sg.Button("Delete State Score", enable_events=True, button_color="red", key=f"answer_delete_state_score_{x['pk']}")])
+
+            frame_ans.append([sg.Frame(f"Issue State Score PK {x['pk']}", frame)])
             j += 1
 
         i += 1

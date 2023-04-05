@@ -75,7 +75,7 @@ def save_question():
         
         j = 0
         for feedback in data.get_advisor_feedback_for_answer(ans_pk):
-            if f"candidate_ans{i}_feedback_{j}" not in window.AllKeysDict:
+            if f"candidate_ans{i}_feedback_{j}" not in window.AllKeysDict or feedback['pk'] not in data.answer_feedback:
                 j += 1
                 continue
             feedback_pk = feedback['pk']
@@ -86,7 +86,7 @@ def save_question():
          # add global score
         j = 0
         for x in data.get_global_score_for_answer(answer['pk']):
-            if f"ans{i}_global_score_candidate_{j}" not in window.AllKeysDict:
+            if f"ans{i}_global_score_candidate_{j}" not in window.AllKeysDict or x['pk'] not in data.answer_score_global:
                 j += 1
                 continue
             pk = x['pk']
@@ -98,7 +98,7 @@ def save_question():
         # add issue score
         j = 0
         for x in data.get_issue_score_for_answer(answer['pk']):
-            if f"ans{i}_issue_score_issue_{j}" not in window.AllKeysDict:
+            if f"ans{i}_issue_score_issue_{j}" not in window.AllKeysDict or x['pk'] not in data.answer_score_issue:
                 j += 1
                 continue
             pk = x['pk']
@@ -110,7 +110,7 @@ def save_question():
         # add state score
         j = 0
         for x in data.get_state_score_for_answer(answer['pk']):
-            if f"ans{i}_state_score_state_{j}" not in window.AllKeysDict:
+            if f"ans{i}_state_score_state_{j}" not in window.AllKeysDict or x['pk'] not in data.answer_score_state:
                 j += 1
                 continue
             pk = x['pk']
@@ -281,6 +281,10 @@ while True:
         data.answer_feedback[new_feedback['pk']] = new_feedback
 
         window.write_event_value("question_picker", [question['pk']])
+    elif "answer_delete_feedback_" in event:
+        pk = int(event.split("answer_delete_feedback_")[1])
+        del data.answer_feedback[pk]
+        window.write_event_value("question_picker", [question['pk']])
     elif "answer_add_global_score_" in event:
         answer_pk = int(event.split("answer_add_global_score_")[1])
         
@@ -298,6 +302,10 @@ while True:
         data.answer_score_global[x['pk']] = x
 
         window.write_event_value("question_picker", [question['pk']])
+    elif "answer_delete_global_score_" in event:
+        pk = int(event.split("answer_delete_global_score_")[1])
+        del data.answer_score_global[pk]
+        window.write_event_value("question_picker", [question['pk']])
     elif "answer_add_issue_score_" in event:
         answer_pk = int(event.split("answer_add_issue_score_")[1])
         
@@ -313,6 +321,10 @@ while True:
         }
 
         data.answer_score_issue[x['pk']] = x
+        window.write_event_value("question_picker", [question['pk']])
+    elif "answer_delete_issue_score_" in event:
+        pk = int(event.split("answer_delete_issue_score_")[1])
+        del data.answer_score_issue[pk]
         window.write_event_value("question_picker", [question['pk']])
     elif "answer_add_state_score_" in event:
         answer_pk = int(event.split("answer_add_state_score_")[1])
@@ -330,6 +342,10 @@ while True:
         }
 
         data.answer_score_state[x['pk']] = x
+        window.write_event_value("question_picker", [question['pk']])
+    elif "answer_delete_state_score_" in event:
+        pk = int(event.split("answer_delete_state_score_")[1])
+        del data.answer_score_state[pk]
         window.write_event_value("question_picker", [question['pk']])
     
 
