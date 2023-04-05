@@ -222,7 +222,7 @@ def create_issue_layout(data, issue):
 
 def create_pickers(data):
 
-    question_pks = sorted(list(data.questions.keys()))
+    question_pks = list(data.questions.keys())
     state_pks = [f"{s['pk']} - {s['fields']['abbr']}" for s in data.states.values()]
     candidate_pks = sorted(list(set([s['fields']['candidate'] for s in data.candidate_issue_score.values()])))
     issue_pks = [f"{s['pk']} - {s['fields']['name']}" for s in data.issues.values()]
