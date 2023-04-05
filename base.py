@@ -2,11 +2,11 @@ import json
 import os
 
 class TCTData:
-    def __init__(self, questions, answers, issues, state_issue_score, candidate_issue_score, running_mate_issue_score, candidate_state_multiplier, answer_score_global, answer_score_issue, answer_score_state, answer_feedback, states):
+    def __init__(self, questions, answers, issues, state_issue_scores, candidate_issue_score, running_mate_issue_score, candidate_state_multiplier, answer_score_global, answer_score_issue, answer_score_state, answer_feedback, states):
         self.questions = questions
         self.answers = answers
         self.issues = issues
-        self.state_issue_score = state_issue_score
+        self.state_issue_scores = state_issue_scores
         self.candidate_issue_score = candidate_issue_score
         self.running_mate_issue_score = running_mate_issue_score
         self.candidate_state_multiplier = candidate_state_multiplier
@@ -31,6 +31,23 @@ class TCTData:
     def get_issue_score_for_answer(self, pk):
         return [x for x in self.answer_score_issue.values() if x['fields']['answer'] == pk]
 
+    def get_issue_score_for_state(self, pk):
+        return [x for x in self.state_issue_scores.values() if x['fields']['state'] == pk]
+    
+    def get_issue_score_for_candidate(self, pk):
+        return [x for x in self.candidate_issue_score.values() if x['fields']['candidate'] == pk]
+    
+    def get_state_multiplier_for_candidate(self, pk):
+        return [x for x in self.candidate_state_multiplier.values() if x['fields']['candidate'] == pk]
+
+    def get_candidate_issue_score_for_issue(self, pk):
+        return [x for x in self.candidate_issue_score.values() if x['fields']['issue'] == pk]
+
+    def get_running_mate_issue_score_for_issue(self, pk):
+        return [x for x in self.running_mate_issue_score.values() if x['fields']['issue'] == pk]
+
+    def get_running_mate_issue_score_for_candidate(self, pk):
+        return [x for x in self.running_mate_issue_score.values() if x['fields']['candidate'] == pk]
 
 def load_data(folder_name):
     questions = {}
@@ -41,7 +58,15 @@ def load_data(folder_name):
     answer_score_globals = {}
     answer_score_issues = {}
     answer_score_states = {}
+    
+    state_issue_scores = {}
 
+    candidate_issue_scores = {}
+    candidate_state_multipliers = {}
+    running_mate_issue_scores = {}
+
+    issues = {}
+    
     f = open(os.path.join(folder_name, "states.json"))
     states_json = json.load(f)
     f.close()
@@ -96,24 +121,39 @@ def load_data(folder_name):
 
     f = open(os.path.join(folder_name, "candidateIssueScores.json"))
     candidate_issue_scores_json = json.load(f)
+    for x in candidate_issue_scores_json:
+        key = x['pk']
+        candidate_issue_scores[key] = x
     f.close()
 
     f = open(os.path.join(folder_name, "candidateStateMultipliers.json"))
     candidate_state_multipliers_json = json.load(f)
-    f.close()
-
-    f = open(os.path.join(folder_name, "issues.json"))
-    issues_json = json.load(f)
+    for x in candidate_state_multipliers_json:
+        key = x['pk']
+        candidate_state_multipliers[key] = x
     f.close()
 
     f = open(os.path.join(folder_name, "runningMateIssueScores.json"))
     running_mate_issue_scores_json = json.load(f)
+    for x in running_mate_issue_scores_json:
+        key = x['pk']
+        running_mate_issue_scores[key] = x
     f.close()
 
     f = open(os.path.join(folder_name, "stateIssueScores.json"))
     state_issue_scores_json = json.load(f)
+    for x in state_issue_scores_json:
+        key = x['pk']
+        state_issue_scores[key] = x
     f.close()
 
-    data = TCTData(questions, answers, issues_json, state_issue_scores_json, candidate_issue_scores_json, running_mate_issue_scores_json, candidate_state_multipliers_json, answer_score_globals, answer_score_issues, answer_score_states, feedbacks, states)
+    f = open(os.path.join(folder_name, "issues.json"))
+    issues_json = json.load(f)
+    for x in issues_json:
+        key = x['pk']
+        issues[key] = x
+    f.close()
+
+    data = TCTData(questions, answers, issues, state_issue_scores, candidate_issue_scores, running_mate_issue_scores, candidate_state_multipliers, answer_score_globals, answer_score_issues, answer_score_states, feedbacks, states)
 
     return data
