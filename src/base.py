@@ -27,62 +27,62 @@ class TCTData:
         temp = None
         with open(os.path.join(path, "code2.txt"), "w") as f:
             f.write("campaignTrail_temp.questions_json = JSON.parse(\"")
-            x = json.dumps(list(self.questions.values())).replace('"', "\\\"").replace("'", "\'").replace("â€™", "\'")
+            x = json.dumps(list(self.questions.values()), indent=4).replace('"', "\\\"").replace("'", "\'").replace("â€™", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.answers_json = JSON.parse(\"")
-            x = json.dumps(list(self.answers.values())).replace('"', "\\\"").replace("'", "\'").replace("â€™", "\'")
+            x = json.dumps(list(self.answers.values()), indent=4).replace('"', "\\\"").replace("'", "\'").replace("â€™", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.states_json = JSON.parse(\"")
-            x = json.dumps(list(self.states.values())).replace('"', "\\\"").replace("'", "\'")
+            x = json.dumps(list(self.states.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.issues_json = JSON.parse(\"")
-            x = json.dumps(list(self.issues.values())).replace('"', "\\\"").replace("'", "\'").replace("â€™", "\'")
+            x = json.dumps(list(self.issues.values()), indent=4).replace('"', "\\\"").replace("'", "\'").replace("â€™", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.state_issue_score_json = JSON.parse(\"")
-            x = json.dumps(list(self.state_issue_scores.values())).replace('"', "\\\"").replace("'", "\'")
+            x = json.dumps(list(self.state_issue_scores.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.candidate_issue_score_json = JSON.parse(\"")
-            x = json.dumps(list(self.candidate_issue_score.values())).replace('"', "\\\"").replace("'", "\'")
+            x = json.dumps(list(self.candidate_issue_score.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.running_mate_issue_score_json = JSON.parse(\"")
-            x = json.dumps(list(self.running_mate_issue_score.values())).replace('"', "\\\"").replace("'", "\'")
+            x = json.dumps(list(self.running_mate_issue_score.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.candidate_state_multiplier_json = JSON.parse(\"")
-            x = json.dumps(list(self.candidate_state_multiplier.values())).replace('"', "\\\"").replace("'", "\'")
+            x = json.dumps(list(self.candidate_state_multiplier.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.answer_score_global_json = JSON.parse(\"")
-            x = json.dumps(list(self.answer_score_global.values())).replace('"', "\\\"").replace("'", "\'")
+            x = json.dumps(list(self.answer_score_global.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.answer_score_issue_json = JSON.parse(\"")
-            x = json.dumps(list(self.answer_score_issue.values())).replace('"', "\\\"").replace("'", "\'")
+            x = json.dumps(list(self.answer_score_issue.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.answer_score_state_json = JSON.parse(\"")
-            x = json.dumps(list(self.answer_score_state.values())).replace('"', "\\\"").replace("'", "\'")
+            x = json.dumps(list(self.answer_score_state.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
             f.write(x)
             f.write("\");\n")
 
             f.write("campaignTrail_temp.answer_feedback_json = JSON.parse(\"")
-            x = json.dumps(list(self.answer_feedback.values())).replace('"', "\\\"").replace("'", "\'")
+            x = json.dumps(list(self.answer_feedback.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
             f.write(x)
             f.write("\");\n")
 
