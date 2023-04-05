@@ -133,6 +133,11 @@ def extract_json(f, start, end):
     return res
 
 def load_data_from_file(file_name):
+
+    if not os.path.exists(file_name):
+        print("No data file exists, just making empty data")
+        return TCTData({},{},{},{},{},{},{},{},{},{},{},{})
+
     questions = {}
     answers = {}
     states = {}

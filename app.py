@@ -16,7 +16,7 @@ sg.theme('SystemDefault')
 
 data = load_data_from_file("default_code2.js")
 current_answers = []
-question = data.questions[min(data.questions.keys())]
+question = data.questions[min(data.questions.keys())] if len(data.questions) > 0 else None
 state = None
 can_pk = None
 issue = None

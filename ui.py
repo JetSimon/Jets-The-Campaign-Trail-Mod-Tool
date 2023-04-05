@@ -3,6 +3,9 @@ import PySimpleGUI as sg
 def create_question_layout(data, question, current_answers):
     col1 = create_pickers(data)
 
+    if question == None:
+        return [[sg.Column(col1)]]
+
     col2 = [
         [sg.Text(f"Question PK {question['pk']}", font=("Helvetica", 12, "bold"))],
         [sg.Text("Priority")],
