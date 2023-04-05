@@ -66,7 +66,7 @@ def save_question():
     i = 0
     for answer in current_answers:
 
-        if f"description_ans{i}" not in window.AllKeysDict:
+        if f"description_ans{i}" not in window.AllKeysDict or answer['pk'] not in data.answers:
             i+=1
             continue
 
@@ -149,6 +149,7 @@ def save_candidate():
         i += 1
 
 def export_data(path):
+    save_current_workspace()
     data.save_as_code_2(path)
 
 def import_data(path):
@@ -244,6 +245,24 @@ while True:
 
         data.answer_feedback[new_feedback['pk']] = new_feedback
         data.answers[new_answer['pk']] = new_answer
+
+        window.write_event_value("question_picker", [question['pk']])
+    elif "delete_answer_" in event:
+        answer_pk = int(event.split("delete_answer_")[1])
+
+        for feedback in data.get_advisor_feedback_for_answer(answer_pk):
+            del data.answer_feedback[feedback['pk']]
+        
+        for x in data.get_issue_score_for_answer(answer_pk):
+            del data.answer_score_issue[x['pk']]
+
+        for x in data.get_state_score_for_answer(answer_pk):
+            del data.answer_score_state[x['pk']]
+
+        for x in data.get_global_score_for_answer(answer_pk):
+            del data.answer_score_global[x['pk']]
+
+        del data.answers[answer_pk]
 
         window.write_event_value("question_picker", [question['pk']])
     elif "answer_add_feedback_" in event:

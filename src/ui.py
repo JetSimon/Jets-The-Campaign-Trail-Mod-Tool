@@ -21,7 +21,7 @@ def create_question_layout(data, question, current_answers):
     i = 0
 
     for answer in data.get_answers_for_question(question['pk']):
-        frame_ans = []
+        frame_ans = [[sg.Button("Delete Answer", enable_events=True, button_color="red", key=f"delete_answer_{answer['pk']}")]]
         current_answers.append(answer)
         frame_ans.append([sg.Text("Description")])
         frame_ans.append([sg.Multiline(default_text=answer['fields']['description'], size=(80, 5), key=f"description_ans{i}")])
