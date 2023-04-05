@@ -1,5 +1,7 @@
 import json
 import os
+import subprocess 
+import re
 
 class TCTData:
     def __init__(self, questions, answers, issues, state_issue_scores, candidate_issue_score, running_mate_issue_score, candidate_state_multiplier, answer_score_global, answer_score_issue, answer_score_state, answer_feedback, states):
@@ -15,6 +17,63 @@ class TCTData:
         self.answer_score_state = answer_score_state
         self.answer_feedback = answer_feedback
         self.states = states
+
+    def save_as_code_2(self, path):
+        print(path)
+        with open(os.path.join(path, "code2.js"), "w") as f:
+            f.write("campaignTrail_temp.questions_json = JSON.parse(\"")
+            json.dump(list(self.questions.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.answers_json = JSON.parse(\"")
+            json.dump(list(self.answers.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.states_json = JSON.parse(\"")
+            json.dump(list(self.states.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.issues_json = JSON.parse(\"")
+            json.dump(list(self.issues.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.state_issue_score_json = JSON.parse(\"")
+            json.dump(list(self.state_issue_scores.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.candidate_issue_score_json = JSON.parse(\"")
+            json.dump(list(self.candidate_issue_score.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.running_mate_issue_score_json = JSON.parse(\"")
+            json.dump(list(self.running_mate_issue_score.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.candidate_state_multiplier_json = JSON.parse(\"")
+            json.dump(list(self.candidate_state_multiplier.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.answer_score_global_json = JSON.parse(\"")
+            json.dump(list(self.answer_score_global.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.answer_score_issue_json = JSON.parse(\"")
+            json.dump(list(self.answer_score_issue.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.answer_score_state_json = JSON.parse(\"")
+            json.dump(list(self.answer_score_state.values()), f)
+            f.write("\");\n")
+
+            f.write("campaignTrail_temp.answer_feedback_json = JSON.parse(\"")
+            json.dump(list(self.answer_feedback.values()), f)
+            f.write("\");\n")
+
+            f.write('campaignTrail_temp.candidate_image_url = "/static/images/george-w-bush-2000.jpg";')
+            f.write('campaignTrail_temp.running_mate_image_url = "/static/images/dick-cheney-2000.jpg";')
+            f.write('campaignTrail_temp.candidate_last_name = "Bush";')
+            f.write('campaignTrail_temp.running_mate_last_name = "Cheney";')
+            f.write('campaignTrail_temp.running_mate_state_id = "231";')
 
     def get_answers_for_question(self, pk):
         return [answer for answer in self.answers.values() if answer['fields']['question'] == pk]
@@ -48,6 +107,120 @@ class TCTData:
 
     def get_running_mate_issue_score_for_candidate(self, pk):
         return [x for x in self.running_mate_issue_score.values() if x['fields']['candidate'] == pk]
+
+def extract_json(f, start, end):
+
+    if(start not in f):
+        print("ERROR: Start not in f")
+        return None
+
+    raw = f.strip().split(start)[1].split(end)[0].strip()
+
+    if raw[0] == '"' or raw[0] == "'":
+        raw = raw[1:]
+
+    if raw[-1] == '"' or raw[-1] == "'":
+        raw = raw[:len(raw)-1]
+
+    subprocess.run("pbcopy", text=True, input=raw)
+
+    res = json.loads(raw)
+
+    if res == None:
+        print("ERROR: Loading json was null, copied to clipboard")
+        print(raw)
+
+    return res
+
+def load_data_from_file(file_name):
+    questions = {}
+    answers = {}
+    states = {}
+    feedbacks = {}
+
+    answer_score_globals = {}
+    answer_score_issues = {}
+    answer_score_states = {}
+    
+    state_issue_scores = {}
+
+    candidate_issue_scores = {}
+    candidate_state_multipliers = {}
+    running_mate_issue_scores = {}
+
+    issues = {}
+
+    raw_json = None
+    with open(file_name, 'r') as f:
+        raw_json = f.read()
+
+    raw_json = raw_json.replace("\n", "")
+    raw_json = re.sub(' +', ' ', raw_json)
+    raw_json = raw_json.replace('\\"', '"')
+    raw_json = raw_json.replace("\\'", "'")
+    #raw_json = raw_json.replace("'", '"')
+
+    states_json = extract_json(raw_json, "campaignTrail_temp.states_json = JSON.parse(", ");")
+    for state in states_json:
+        states[state["pk"]] = state
+
+    questions_json = extract_json(raw_json, "campaignTrail_temp.questions_json = JSON.parse(", ");")
+    for question in questions_json:
+        questions[question["pk"]] = question
+
+    answers_json = extract_json(raw_json, "campaignTrail_temp.answers_json = JSON.parse(", ");")
+    for answer in answers_json:
+        key = answer["pk"]
+        answers[key] = answer
+
+    answer_feedbacks_json = extract_json(raw_json, "campaignTrail_temp.answer_feedback_json = JSON.parse(", ");")
+    for feedback in answer_feedbacks_json:
+        key = feedback['pk']
+        feedbacks[key] = feedback
+
+    answer_score_globals_json = extract_json(raw_json, "campaignTrail_temp.answer_score_global_json = JSON.parse(", ");")
+    for x in answer_score_globals_json:
+        key = x['pk']
+        answer_score_globals[key] = x
+
+    answer_score_issues_json = extract_json(raw_json, "campaignTrail_temp.answer_score_issue_json = JSON.parse(", ");")
+    for x in answer_score_issues_json:
+        key = x['pk']
+        answer_score_issues[key] = x
+
+    answer_score_states_json = extract_json(raw_json, "campaignTrail_temp.answer_score_state_json = JSON.parse(", ");")
+    for x in answer_score_states_json:
+        key = x['pk']
+        answer_score_states[key] = x
+
+    candidate_issue_scores_json = extract_json(raw_json, "campaignTrail_temp.candidate_issue_score_json = JSON.parse(", ");")
+    for x in candidate_issue_scores_json:
+        key = x['pk']
+        candidate_issue_scores[key] = x
+
+    candidate_state_multipliers_json = extract_json(raw_json, "campaignTrail_temp.candidate_state_multiplier_json = JSON.parse(", ");")
+    for x in candidate_state_multipliers_json:
+        key = x['pk']
+        candidate_state_multipliers[key] = x
+
+    running_mate_issue_scores_json = extract_json(raw_json, "campaignTrail_temp.running_mate_issue_score_json = JSON.parse(", ");")
+    for x in running_mate_issue_scores_json:
+        key = x['pk']
+        running_mate_issue_scores[key] = x
+
+    state_issue_scores_json = extract_json(raw_json, "campaignTrail_temp.state_issue_score_json = JSON.parse(", ");")
+    for x in state_issue_scores_json:
+        key = x['pk']
+        state_issue_scores[key] = x
+
+    issues_json = extract_json(raw_json, "campaignTrail_temp.issues_json = JSON.parse(", ");")
+    for x in issues_json:
+        key = x['pk']
+        issues[key] = x
+
+    data = TCTData(questions, answers, issues, state_issue_scores, candidate_issue_scores, running_mate_issue_scores, candidate_state_multipliers, answer_score_globals, answer_score_issues, answer_score_states, feedbacks, states)
+
+    return data
 
 def load_data(folder_name):
     questions = {}

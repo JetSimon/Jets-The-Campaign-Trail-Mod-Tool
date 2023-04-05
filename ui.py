@@ -149,7 +149,7 @@ def create_candidate_layout(data, candidate_pk):
 
     col2.append([sg.Frame("Candidate State Multipliers", candidate_state_multiplier_frame)])
 
-    layout = [[sg.Column(col1, vertical_alignment="t"), sg.Column(col2, scrollable=True, vertical_scroll_only=True, expand_x=True, expand_y=True, vertical_alignment="t")]]
+    layout = [[sg.Column(col1, vertical_alignment="t"), sg.Column(col2, vertical_scroll_only=True, scrollable=True, expand_x=True, expand_y=True, vertical_alignment="t")]]
     return layout
 
 def create_issue_layout(data, issue):
@@ -222,10 +222,8 @@ def create_pickers(data):
 
 
     layout = [
-    [sg.Button("Save", key="save")],
-    [sg.Button("Load", key="load")],
-    [sg.Button("Export Code 2", key="export2")],
-    [sg.Button("Import Code 2", key="import2")],
+    [sg.FolderBrowse(key="export2", button_text="Export Code 2", enable_events=True)],
+    [sg.FileBrowse(key="import2", button_text="Import Code 2", enable_events=True)],
     [sg.Text("Questions", font=("Helvetica", 12, "bold"))],
     [sg.Listbox(values=question_pks, size=(10, 15), expand_y=True, expand_x=True, key="question_picker", enable_events=True)],
     [sg.Text("States", font=("Helvetica", 12, "bold"))],

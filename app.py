@@ -2,10 +2,19 @@ from base import *
 from ui import *
 import PySimpleGUI as sg
 
+global window
+global data
+global state
+global can_pk
+global issue
+global current_mode
+global current_answers
+global layout
+global question
+
 sg.theme('SystemDefault')
 
-data = load_data("json")
-    
+data = load_data_from_file("default_code2.js")
 current_answers = []
 question = data.questions[min(data.questions.keys())]
 state = None
@@ -46,6 +55,7 @@ def save_state():
         i += 1
 
 def save_question():
+
     pk = question['pk']
     data.questions[pk]['fields']['description'] = window["description"].get()
     data.questions[pk]['fields']['priority'] = int(window["priority"].get())
@@ -115,10 +125,36 @@ def save_candidate():
         data.candidate_state_multiplier[x['pk']]['fields']['state_multiplier'] = float(window[f"candidate_state_multiplier_{i}"].get())
         i += 1
 
+def export_data(path):
+    data.save_as_code_2(path)
+
+def import_data(path):
+    global window
+    global data
+    global state
+    global can_pk
+    global issue
+    global current_mode
+    global current_answers
+    global layout
+    global question
+
+    data = load_data_from_file(path)
+    current_answers = []
+    question = data.questions[min(data.questions.keys())]
+    state = None
+    can_pk = None
+    issue = None
+    layout = create_question_layout(data, question, current_answers)
+    new_window = sg.Window("Jet's TCT Mod Maker", layout, location=window.current_location(), size=window.size, resizable=True)
+    window.close()
+    window = new_window
+    current_mode = "QUESTION"
 
 # Create an event loop
 while True:
     event, values = window.read()
+
     # End program if user closes window or
     # presses the OK button
     if event == "OK" or event == sg.WIN_CLOSED:
@@ -158,5 +194,11 @@ while True:
         window.close()
         window = new_window
         current_mode = "ISSUE"
+    elif event == "import2":
+        import_data(values['import2'])
+    elif event == "export2":
+        print("export " + values['export2'])
+        export_data(values['export2'])
+    
 
 window.close()
