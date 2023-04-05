@@ -23,8 +23,10 @@ issue = None
 
 layout = create_question_layout(data, question, current_answers)
 
+NAME = "Jet's TCT Mod Maker v 1.0.0"
+
 # Create the window
-window = sg.Window("Jet's TCT Mod Maker", layout, size=(1000,800), resizable=True)
+window = sg.Window(NAME, layout, size=(1000,800), resizable=True)
 
 current_mode = "QUESTION"
 
@@ -146,7 +148,7 @@ def import_data(path):
     can_pk = None
     issue = None
     layout = create_question_layout(data, question, current_answers)
-    new_window = sg.Window("Jet's TCT Mod Maker", layout, location=window.current_location(), size=window.size, resizable=True)
+    new_window = sg.Window(NAME, layout, location=window.current_location(), size=window.size, resizable=True)
     window.close()
     window = new_window
     current_mode = "QUESTION"
@@ -165,7 +167,7 @@ while True:
         new_question_pk = values['question_picker'][0]
         question = data.questions[new_question_pk]
         layout = create_question_layout(data, question, current_answers)
-        new_window = sg.Window("Jet's TCT Mod Maker", layout, location=window.current_location(), size=window.size, resizable=True)
+        new_window = sg.Window(NAME, layout, location=window.current_location(), size=window.size, resizable=True)
         window.close()
         window = new_window
         current_mode = "QUESTION"
@@ -174,7 +176,7 @@ while True:
         new_state_pk = int(values['state_picker'][0].split(" -")[0])
         state = data.states[new_state_pk]
         layout = create_state_layout(data, state)
-        new_window = sg.Window("Jet's TCT Mod Maker", layout, location=window.current_location(), size=window.size, resizable=True)
+        new_window = sg.Window(NAME, layout, location=window.current_location(), size=window.size, resizable=True)
         window.close()
         window = new_window
         current_mode = "STATE"
@@ -182,7 +184,7 @@ while True:
         save_current_workspace()
         can_pk = int(values['can_picker'][0])
         layout = create_candidate_layout(data, can_pk)
-        new_window = sg.Window("Jet's TCT Mod Maker", layout, location=window.current_location(), size=window.size, resizable=True)
+        new_window = sg.Window(NAME, layout, location=window.current_location(), size=window.size, resizable=True)
         window.close()
         window = new_window
         current_mode = "CAN"
@@ -190,7 +192,7 @@ while True:
         save_current_workspace()
         issue = data.issues[int(values['issue_picker'][0].split(" -")[0])]
         layout = create_issue_layout(data, issue)
-        new_window = sg.Window("Jet's TCT Mod Maker", layout, location=window.current_location(), size=window.size, resizable=True)
+        new_window = sg.Window(NAME, layout, location=window.current_location(), size=window.size, resizable=True)
         window.close()
         window = new_window
         current_mode = "ISSUE"

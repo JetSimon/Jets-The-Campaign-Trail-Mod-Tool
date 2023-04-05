@@ -169,6 +169,10 @@ def create_issue_layout(data, issue):
     frame.append([sg.Input(default_text=issue['fields']['name'], key=f"issue_name")])
 
     for i in range(1, 8):
+        
+        if f'stance_{i}' not in issue['fields']:
+            data.issues[issue['pk']]['fields'][f'stance_{i}'] = ""
+
         frame.append([sg.Text(f"Stance {i}")])
         frame.append([sg.Input(default_text=issue['fields'][f'stance_{i}'], key=f"stance_{i}")])
 
@@ -228,9 +232,9 @@ def create_pickers(data):
     [sg.FolderBrowse(key="export2", button_text="Export Code 2", enable_events=True)],
     [sg.FileBrowse(key="import2", button_text="Import Code 2", enable_events=True)],
     [sg.Text("Questions", font=("Helvetica", 12, "bold"))],
-    [sg.Listbox(values=question_pks, size=(10, 15), expand_y=True, expand_x=True, key="question_picker", enable_events=True)],
+    [sg.Listbox(values=question_pks, size=(10, 12), expand_y=True, expand_x=True, key="question_picker", enable_events=True)],
     [sg.Text("States", font=("Helvetica", 12, "bold"))],
-    [sg.Listbox(values=state_pks, size=(10, 15), expand_y=True, expand_x=True, key="state_picker", enable_events=True)],
+    [sg.Listbox(values=state_pks, size=(10, 12), expand_y=True, expand_x=True, key="state_picker", enable_events=True)],
     [sg.Text("Issues", font=("Helvetica", 12, "bold"))],
     [sg.Listbox(values=issue_pks, size=(15, 5), expand_y=True, expand_x=True, key="issue_picker", enable_events=True)],
     [sg.Text("Candidates", font=("Helvetica", 12, "bold"))],

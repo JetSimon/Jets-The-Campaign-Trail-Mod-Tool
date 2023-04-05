@@ -1,0 +1,6 @@
+*.spec
+__pycache__/
+build/
+dist/
+.DS_Store
+
