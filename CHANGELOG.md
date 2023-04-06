@@ -8,3 +8,4 @@
 - Added ability to delete answers
 - Added ability to delete answer fields
 - Added export dumping pretty json instead
+- Added support to import the code 2s that use actual js to define their data

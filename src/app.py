@@ -16,14 +16,14 @@ sg.theme('SystemDefault')
 
 data = load_data_from_file("default_code2.js")
 current_answers = []
-question = data.questions[min(data.questions.keys())] if len(data.questions) > 0 else None
+question = data.questions[min(data.questions.keys(), default=None)] if len(data.questions) > 0 else None
 state = None
 can_pk = None
 issue = None
 
 layout = create_question_layout(data, question, current_answers)
 
-NAME = "Jet's TCT Mod Maker v 1.0.0"
+NAME = "Jet's TCT Mod Tool v1.0.2"
 
 # Create the window
 window = sg.Window(NAME, layout, size=(1000,800), resizable=True)
@@ -57,6 +57,9 @@ def save_state():
         i += 1
 
 def save_question():
+
+    if question == None:
+        return
 
     pk = question['pk']
     data.questions[pk]['fields']['description'] = window["description"].get()
@@ -165,7 +168,7 @@ def import_data(path):
 
     data = load_data_from_file(path)
     current_answers = []
-    question = data.questions[min(data.questions.keys())]
+    question = data.questions[min(data.questions.keys(), default=None)] if len(data.questions) > 0 else None
     state = None
     can_pk = None
     issue = None
