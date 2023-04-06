@@ -19,7 +19,8 @@ What this modding tool CANNOT do (yet):
 * Code 1 creation (though this part is generally seen as the “easier” part of modding, so I think you guys got this!)
 * Does not support CYOA, custom endings, or any other mods that involve custom JavaScript
 * Does not add any aesthetic changes to the end of code 2. You’ll have to add those manually after export.
-You can download here on GitHub in the “releases” folder (currently only Windows, but you can build from source or I can make a Mac version if there is enough demand).
+
+You can download here on GitHub in the “releases” folder.
 
 If you have any issues report them on the GitHub in the issues tab.
 
