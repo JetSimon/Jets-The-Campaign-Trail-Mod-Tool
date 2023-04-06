@@ -23,7 +23,7 @@ issue = None
 
 layout = create_question_layout(data, question, current_answers)
 
-NAME = "Jet's TCT Mod Tool v1.0.2"
+NAME = "Jet's TCT Mod Tool v1.0.3"
 
 # Create the window
 window = sg.Window(NAME, layout, size=(1000,800), resizable=True)
