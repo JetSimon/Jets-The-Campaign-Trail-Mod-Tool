@@ -1,0 +1,6 @@
+- [ ] Fix highest PK bug (if real)
+- [ ] Add ability to add/delete stuff in the issues panel
+- [ ] Clean up app.py
+- [ ] Clean up ui.py
+- [ ] Clean up base.py
+- [ ] Fix question loading performance
