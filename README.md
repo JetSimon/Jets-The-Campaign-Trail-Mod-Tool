@@ -1,4 +1,4 @@
-# Jets-The-Campaign-Trail-Mod-Maker
+# Jet's The Campaign Trail Mod Tool
 
 This is a graphical mod creation tool for [The Campaign Trail](https://www.americanhistoryusa.com/campaign-trail/).
 
