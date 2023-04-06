@@ -26,65 +26,65 @@ class TCTData:
     def save_as_code_2(self, path):
         temp = None
         with open(os.path.join(path, "code2.txt"), "w") as f:
-            f.write("campaignTrail_temp.questions_json = JSON.parse(\"")
-            x = json.dumps(list(self.questions.values()), indent=4).replace('"', "\\\"").replace("'", "\'").replace("â€™", "\'")
+            f.write("campaignTrail_temp.questions_json = ")
+            x = json.dumps(list(self.questions.values()), indent=4).replace("â€™", "\'")
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.answers_json = JSON.parse(\"")
-            x = json.dumps(list(self.answers.values()), indent=4).replace('"', "\\\"").replace("'", "\'").replace("â€™", "\'")
+            f.write("campaignTrail_temp.answers_json = ")
+            x = json.dumps(list(self.answers.values()), indent=4).replace("â€™", "\'")
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.states_json = JSON.parse(\"")
-            x = json.dumps(list(self.states.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
+            f.write("campaignTrail_temp.states_json = ")
+            x = json.dumps(list(self.states.values()), indent=4)
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.issues_json = JSON.parse(\"")
-            x = json.dumps(list(self.issues.values()), indent=4).replace('"', "\\\"").replace("'", "\'").replace("â€™", "\'")
+            f.write("campaignTrail_temp.issues_json = ")
+            x = json.dumps(list(self.issues.values()), indent=4).replace("â€™", "\'")
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.state_issue_score_json = JSON.parse(\"")
-            x = json.dumps(list(self.state_issue_scores.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
+            f.write("campaignTrail_temp.state_issue_score_json = ")
+            x = json.dumps(list(self.state_issue_scores.values()), indent=4)
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.candidate_issue_score_json = JSON.parse(\"")
-            x = json.dumps(list(self.candidate_issue_score.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
+            f.write("campaignTrail_temp.candidate_issue_score_json = ")
+            x = json.dumps(list(self.candidate_issue_score.values()), indent=4)
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.running_mate_issue_score_json = JSON.parse(\"")
-            x = json.dumps(list(self.running_mate_issue_score.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
+            f.write("campaignTrail_temp.running_mate_issue_score_json = ")
+            x = json.dumps(list(self.running_mate_issue_score.values()), indent=4)
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.candidate_state_multiplier_json = JSON.parse(\"")
-            x = json.dumps(list(self.candidate_state_multiplier.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
+            f.write("campaignTrail_temp.candidate_state_multiplier_json = ")
+            x = json.dumps(list(self.candidate_state_multiplier.values()), indent=4)
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.answer_score_global_json = JSON.parse(\"")
-            x = json.dumps(list(self.answer_score_global.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
+            f.write("campaignTrail_temp.answer_score_global_json = ")
+            x = json.dumps(list(self.answer_score_global.values()), indent=4)
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.answer_score_issue_json = JSON.parse(\"")
-            x = json.dumps(list(self.answer_score_issue.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
+            f.write("campaignTrail_temp.answer_score_issue_json = ")
+            x = json.dumps(list(self.answer_score_issue.values()), indent=4)
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.answer_score_state_json = JSON.parse(\"")
-            x = json.dumps(list(self.answer_score_state.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
+            f.write("campaignTrail_temp.answer_score_state_json = ")
+            x = json.dumps(list(self.answer_score_state.values()), indent=4)
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
-            f.write("campaignTrail_temp.answer_feedback_json = JSON.parse(\"")
-            x = json.dumps(list(self.answer_feedback.values()), indent=4).replace('"', "\\\"").replace("'", "\'")
+            f.write("campaignTrail_temp.answer_feedback_json = ")
+            x = json.dumps(list(self.answer_feedback.values()), indent=4)
             f.write(x)
-            f.write("\");\n")
+            f.write("\n\n")
 
     def get_answers_for_question(self, pk):
         return [answer for answer in self.answers.values() if answer['fields']['question'] == pk]
@@ -121,11 +121,15 @@ class TCTData:
 
 def extract_json(f, start, end, backup = None, backup_end = None):
 
-    if(start not in f):
+    if start not in f:
         if not backup == None:
             return extract_json(f, backup, end if backup_end == None else backup_end)
         print(f"ERROR: Start [{start}] not in file provided, returning none")
         return {}
+    elif "JSON.parse" in start:
+        f = f.replace('\\"', '"')
+        f = f.replace("\\'", "'")
+        f = f.replace("\\\\", "\\")
 
     raw = f.strip().split(start)[1].split(end)[0].strip()
 
@@ -139,8 +143,9 @@ def extract_json(f, start, end, backup = None, backup_end = None):
         if end == "]":
             raw = "[" + raw + "]"
         res = json.loads(raw)
-    except:
+    except Exception as e:
         print(f"Ran into error parsing JSON for start [{start}]. Copying raw to clipboard.")
+        print(f"Error: {e}")
         pyperclip.copy(raw)
         return {}
 
@@ -186,9 +191,6 @@ def load_data_from_file(file_name):
 
     raw_json = raw_json.replace("\n", "")
     raw_json = re.sub(' +', ' ', raw_json)
-    raw_json = raw_json.replace('\\"', '"')
-    raw_json = raw_json.replace("\\'", "'")
-    raw_json = raw_json.replace("\\\\", "\\")
 
     states_json = extract_json(raw_json, "campaignTrail_temp.states_json = JSON.parse(", ");", "campaignTrail_temp.states_json = [", "]")
     for state in states_json:

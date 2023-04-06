@@ -1,3 +1,7 @@
+# 1.0.3
+
+- Changed export to use pure js format instead of janky parsed format. This should make exported files on the whole way more likely to work with the mod loader!
+
 # 1.0.2
 
 - Created changelog
