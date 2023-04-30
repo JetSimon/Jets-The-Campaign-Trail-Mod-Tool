@@ -118,6 +118,9 @@ class TCTData:
 
     def get_running_mate_issue_score_for_candidate(self, pk):
         return [x for x in self.running_mate_issue_score.values() if x['fields']['candidate'] == pk]
+    
+    def get_candidate_state_multipliers_for_state(self, pk):
+        return [x for x in self.candidate_state_multiplier.values() if x['fields']['state'] == pk]
 
 def extract_json(f, start, end, backup = None, backup_end = None):
 

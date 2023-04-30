@@ -23,7 +23,7 @@ issue = None
 
 layout = create_question_layout(data, question, current_answers)
 
-NAME = "Jet's TCT Mod Tool v1.0.3"
+NAME = "Jet's TCT Mod Tool v1.0.4"
 
 # Create the window
 window = sg.Window(NAME, layout, size=(1000,800), resizable=True)
@@ -47,6 +47,10 @@ def save_state():
     pk = state['pk']
     data.states[pk]['fields']['electoral_votes'] = int(window['electoral_votes'].get())
     data.states[pk]['fields']['popular_votes'] = int(window['popular_votes'].get())
+
+    for x in data.get_candidate_state_multipliers_for_state(state['pk']):
+        x_pk = x['pk']
+        data.candidate_state_multiplier[x_pk]['fields']['state_multiplier'] = float(window[f"candidate_state_multiplier_{x['fields']['candidate']}"].get())
 
     i = 0
     for x in data.get_issue_score_for_state(pk):
@@ -189,7 +193,7 @@ while True:
     elif event == 'question_picker':
         save_current_workspace()
         current_answers = []
-        new_question_pk = values['question_picker'][0]
+        new_question_pk = int(values['question_picker'][0].split(" -")[0])
         question = data.questions[new_question_pk]
         layout = create_question_layout(data, question, current_answers)
         new_window = sg.Window(NAME, layout, location=window.current_location(), size=window.size, resizable=True)
