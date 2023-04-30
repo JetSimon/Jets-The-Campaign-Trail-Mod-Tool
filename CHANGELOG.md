@@ -1,3 +1,8 @@
+# 1.0.4
+
+- Added description previews beside question pks in the dropdown. Hopefully this makes it easier to edit questions.
+- Made candidate state multipliers also show up in the state menu, that way you can change all candidate state multipliers for a state in one place.
+
 # 1.0.3
 
 - Changed export to use pure js format instead of janky parsed format. This should make exported files on the whole way more likely to work with the mod loader!
