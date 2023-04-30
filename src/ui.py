@@ -57,7 +57,7 @@ def create_question_layout(data, question, current_answers):
             
             frame.append([sg.Button("Delete Global Score", enable_events=True, button_color="red", key=f"answer_delete_global_score_{x['pk']}")])
 
-            frame_ans.append([sg.Frame(f"Global Answer Score PK {x['pk']}", frame)])
+            frame_ans.append([sg.Frame(f"Answer Global Score PK {x['pk']}", frame)])
             j += 1
 
         frame_ans.append([sg.Button("Add New Issue Score", enable_events=True, key=f"answer_add_issue_score_{answer['pk']}")])
@@ -77,7 +77,7 @@ def create_question_layout(data, question, current_answers):
             
             frame.append([sg.Button("Delete Issue Score", enable_events=True, button_color="red", key=f"answer_delete_issue_score_{x['pk']}")])
 
-            frame_ans.append([sg.Frame(f"Issue Answer Score PK {x['pk']}", frame)])
+            frame_ans.append([sg.Frame(f"Answer Issue Score PK {x['pk']}", frame)])
             j += 1
 
         frame_ans.append([sg.Button("Add New State Score", enable_events=True, key=f"answer_add_state_score_{answer['pk']}")])
@@ -100,7 +100,7 @@ def create_question_layout(data, question, current_answers):
 
             frame.append([sg.Button("Delete State Score", enable_events=True, button_color="red", key=f"answer_delete_state_score_{x['pk']}")])
 
-            frame_ans.append([sg.Frame(f"Issue State Score PK {x['pk']}", frame)])
+            frame_ans.append([sg.Frame(f"Answer State Score PK {x['pk']}", frame)])
             j += 1
 
         i += 1
