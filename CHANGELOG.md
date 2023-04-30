@@ -2,6 +2,7 @@
 
 - Added description previews beside question pks in the dropdown. Hopefully this makes it easier to edit questions.
 - Made candidate state multipliers also show up in the state menu, that way you can change all candidate state multipliers for a state in one place.
+- Fixed some small misleading typos in the tool
 
 # 1.0.3
 
