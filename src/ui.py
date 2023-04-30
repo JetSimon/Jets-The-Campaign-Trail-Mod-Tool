@@ -121,6 +121,15 @@ def create_state_layout(data, state):
         [sg.Input(default_text=state['fields']['popular_votes'], key="popular_votes")],
     ]
 
+    for x in data.get_candidate_state_multipliers_for_state(state['pk']):
+        frame = []
+
+        frame.append([sg.Text(f"Candidate {x['fields']['candidate']} State Multiplier", font=("Helvetica", 12, "bold"))])
+        frame.append([sg.Input(default_text=x['fields']['state_multiplier'], key=f"candidate_state_multiplier_{x['fields']['candidate']}")])
+
+        col2.append([sg.Frame(f"State Multiplier for Candidate PK {x['fields']['candidate']}", frame)])
+        
+
     i = 0
     for x in data.get_issue_score_for_state(state['pk']):
 
@@ -129,10 +138,10 @@ def create_state_layout(data, state):
         frame.append([sg.Text("Issue PK")])
         frame.append([sg.Input(default_text=x['fields']['issue'], key=f"issue_issue_{i}")])
 
-        frame.append([sg.Text("Candidate PK")])
+        frame.append([sg.Text("State Issue Score")])
         frame.append([sg.Input(default_text=x['fields']['state_issue_score'], key=f"issue_state_issue_score_{i}")])
 
-        frame.append([sg.Text("Affected Candidate PK")])
+        frame.append([sg.Text("Issue Weight")])
         frame.append([sg.Input(default_text=x['fields']['weight'], key=f"issue_weight_{i}")])
 
         col2.append([sg.Frame(f"Statue Issue Score PK {x['pk']}", frame)])
@@ -160,7 +169,7 @@ def create_candidate_layout(data, candidate_pk):
         frame.append([sg.Text(f"{state_name} Candidate State Multiplier", font=("Helvetica", 12, "bold"))])
         frame.append([sg.Input(default_text=x['fields']['state_multiplier'], key=f"candidate_state_multiplier_{i}")])
 
-        candidate_state_multiplier_frame.append([sg.Frame(f"Candidate Issue Score PK {x['pk']}", frame)])
+        candidate_state_multiplier_frame.append([sg.Frame(f"Candidate State Multiplier PK {x['pk']}", frame)])
         i += 1
 
     col2.append([sg.Frame("Candidate State Multipliers", candidate_state_multiplier_frame)])
@@ -235,7 +244,7 @@ def create_issue_layout(data, issue):
 
 def create_pickers(data):
 
-    question_pks = list(data.questions.keys())
+    question_pks = [f"{question['pk']} - {question['fields']['description'][:min(10, len(question['fields']['description']))]}" for question in data.questions.values()]
     state_pks = [f"{s['pk']} - {s['fields']['abbr']}" for s in data.states.values()]
     candidate_pks = sorted(list(set([s['fields']['candidate'] for s in data.candidate_issue_score.values()])))
     issue_pks = [f"{s['pk']} - {s['fields']['name']}" for s in data.issues.values()]
